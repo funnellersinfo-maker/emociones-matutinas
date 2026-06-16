@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Mail, MapPin, Clock, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Heart, Instagram, Facebook } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -43,12 +43,23 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-gray-400 hover:text-pink-500 flex items-center gap-2 transition-colors"
+                aria-label="Contactar por WhatsApp: +57 320 276 1748"
               >
-                <Phone className="w-3 h-3" /> WhatsApp: +57 320 276 1748
+                <Phone className="w-3 h-3 flex-shrink-0" /> WhatsApp: +57 320 276 1748
               </a>
-              <p className="text-xs text-gray-400 flex items-center gap-2"><Mail className="w-3 h-3" /> hola@emocionesmatutinas.com</p>
-              <p className="text-xs text-gray-400 flex items-center gap-2"><MapPin className="w-3 h-3" /> Bogotá, Colombia</p>
-              <p className="text-xs text-gray-400 flex items-center gap-2"><Clock className="w-3 h-3" /> Lun-Sáb: 7am - 8pm</p>
+              <a
+                href="mailto:funnellers.info@gmail.com"
+                className="text-xs text-gray-400 hover:text-pink-500 flex items-center gap-2 transition-colors break-all"
+                aria-label="Enviar correo electrónico"
+              >
+                <Mail className="w-3 h-3 flex-shrink-0" /> funnellers.info@gmail.com
+              </a>
+              <p className="text-xs text-gray-400 flex items-center gap-2">
+                <MapPin className="w-3 h-3 flex-shrink-0" /> Bogotá, Colombia
+              </p>
+              <p className="text-xs text-gray-400 flex items-center gap-2">
+                <Clock className="w-3 h-3 flex-shrink-0" /> L-S 7am-7pm, Dom 8am-5pm
+              </p>
             </div>
           </div>
         </div>
@@ -58,10 +69,31 @@ export function Footer() {
           <p className="text-xs text-gray-300">
             &copy; 2025 Emociones Matutinas. Todos los derechos reservados.
           </p>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-300">Hecho con</span>
-            <Heart className="w-3 h-3 text-pink-400 fill-pink-400" />
-            <span className="text-xs text-gray-300">en Bogotá</span>
+          <div className="flex items-center gap-4">
+            {/* Social Media */}
+            <a
+              href="https://instagram.com/emocionesmatutinas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-pink-500 transition-colors"
+              aria-label="Síguenos en Instagram"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a
+              href="https://facebook.com/emocionesmatutinas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-pink-500 transition-colors"
+              aria-label="Síguenos en Facebook"
+            >
+              <Facebook className="w-4 h-4" />
+            </a>
+            <div className="flex items-center gap-1">
+              <span className="text-xs text-gray-300">Hecho con</span>
+              <Heart className="w-3 h-3 text-pink-400 fill-pink-400" />
+              <span className="text-xs text-gray-300">en Bogotá</span>
+            </div>
           </div>
         </div>
       </div>

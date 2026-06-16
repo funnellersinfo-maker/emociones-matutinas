@@ -330,3 +330,44 @@ Stage Summary:
 - Each category has exactly 20 products with 20 unique images
 - Total product images in /public/products/: 186 (160 category-specific + 26 legacy)
 - App fully functional with real product images throughout
+
+---
+Task ID: 5
+Agent: QA/DevOps
+Task: Convert Emociones Matutinas from dynamic app (API + Prisma) to fully static export for Cloudflare Pages
+
+Work Log:
+- Read worklog.md to understand previous work (Tasks 1-4, 2a-2e)
+- STEP 1: Updated next.config.ts - changed output from "standalone" to "export", added images: { unoptimized: true }, kept ignoreBuildErrors and reactStrictMode: false
+- STEP 2: Exported all 160 products from SQLite DB to public/products-data.json using PrismaClient script
+- STEP 3: Deleted entire API routes folder (src/app/api/), removed src/lib/db.ts (Prisma client import file)
+- STEP 4: Created src/lib/products-data.ts with Product type and allProducts array imported from JSON, plus filterProducts utility function; Rewrote src/app/page.tsx to use static data with useMemo filtering instead of async fetch calls - removed all useState for bestSellers/offers/recommended/digitalProducts and replaced with useMemo filtering of allProducts; Removed loading state since static data is instant
+- STEP 5: Updated layout.tsx metadata - added metadataBase URL, updated description to include "flores, peluches y más" and "Pedidos hasta las 7pm", added og:url, added og:image with dimensions and alt text
+- STEP 6: Audited components - HeroBanner (✅ image+overlay+CTA+responsive+alt), FloatingActions (✅ WhatsApp 573202761748+aria-labels), CheckoutFlow (✅ WhatsApp-only checkout); Fixed Footer: updated email to funnellers.info@gmail.com with mailto: link and break-all class, updated hours to "L-S 7am-7pm, Dom 8am-5pm", added Instagram/Facebook social media links with aria-labels, added aria-label to WhatsApp link
+- STEP 7: Verified all Image components have proper alt text, sizes attributes, and correct loading behavior (priority for hero, lazy default for others)
+- STEP 8: Updated package.json build script from "next build && cp -r..." to just "next build" (no standalone copy needed); Build succeeded with 228 files, 22MB output in out/ directory; No errors in lint check; Dev server running correctly with 200 responses
+
+Files Modified:
+- next.config.ts - Changed to static export configuration
+- src/app/page.tsx - Replaced API fetch logic with static data + useMemo filtering
+- src/app/layout.tsx - Added metadataBase, updated OG metadata
+- src/components/shop/Footer.tsx - Fixed email, hours, added social links and aria-labels
+- package.json - Simplified build script
+
+Files Created:
+- public/products-data.json - 160 products exported from DB (218KB)
+- src/lib/products-data.ts - Type definitions + allProducts export + filterProducts utility
+
+Files Deleted:
+- src/app/api/ (entire folder including route.ts and products/route.ts)
+- src/lib/db.ts (Prisma client import - no longer needed at runtime)
+
+Stage Summary:
+- App successfully converted from dynamic (API routes + Prisma DB) to fully static export
+- Static build produces 228 files totaling 22MB in out/ directory
+- All product data loaded from static JSON with client-side filtering (no API calls)
+- All cart/checkout functionality preserved (Zustand persist works in static)
+- SEO metadata enhanced with og:image, og:url, metadataBase
+- Footer updated with correct business info (email, hours, social links)
+- Build passes cleanly, lint passes, dev server works
+- Ready for deployment to Cloudflare Pages (just upload out/ directory)
