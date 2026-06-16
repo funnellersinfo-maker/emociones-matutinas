@@ -71,3 +71,32 @@ Stage Summary:
 - All product cards now show real AI images instead of emoji placeholders
 - All UI components upgraded from emojis to Lucide icons
 - Professional, clean aesthetic achieved
+
+---
+Task ID: 3
+Agent: Main
+Task: Add marquee banner, floating WhatsApp/scroll-top buttons, update WhatsApp links
+
+Work Log:
+- Replaced static top info bar in Header.tsx with scrolling CSS marquee animation
+- Added 10 rotating social proof messages (4.9 satisfacción, +4000 sorpresas, entregas Bogotá, pedidos 7pm, nuevos productos, hecho con amor, cobertura Bogotá, 2000 clientes felices, dedicatoria gratis, envío express)
+- Marquee duplicates items for seamless infinite loop, pauses on hover
+- Added marquee CSS keyframes and .animate-marquee class to globals.css
+- Created FloatingActions.tsx component with translucent WhatsApp button and scroll-to-top arrow
+- WhatsApp button: green translucent bg with backdrop-blur, positioned above cart bar on right side
+- Scroll-to-top: pink translucent bg with backdrop-blur, appears after 400px scroll, positioned above WhatsApp button
+- Both buttons dynamically adjust position when cart bar is visible (items in cart)
+- WhatsApp floating button generates personalized message with current cart items in real-time
+- Updated CheckoutFlow WhatsApp URL from 573001234567 to correct 573202761748
+- Updated Footer WhatsApp number to +57 320 276 1748 and made it a clickable wa.me link
+- All wa.me links now use 573202761748 consistently across the app
+- Tested with Agent Browser: marquee scrolling, floating buttons visible, cart flow works, no errors
+- Verified mobile responsiveness (iPhone 14 viewport): all elements properly positioned
+
+Stage Summary:
+- Scrolling marquee banner with 10 social proof messages rotating right-to-left
+- Floating translucent WhatsApp button (+573202761748) with real-time cart info
+- Floating translucent scroll-to-top arrow button (appears after scrolling)
+- All WhatsApp links unified to +573202761748
+- Personalized WhatsApp messages include cart contents when items are present
+- Clean, non-intrusive design that doesn't compete with main UI

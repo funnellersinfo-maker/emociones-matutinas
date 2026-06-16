@@ -38,7 +38,14 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-gray-700 text-sm mb-3">Contáctanos</h4>
             <div className="space-y-2">
-              <p className="text-xs text-gray-400 flex items-center gap-2"><Phone className="w-3 h-3" /> WhatsApp: +57 300 123 4567</p>
+              <a
+                href="https://wa.me/573202761748?text=Hola%20Emociones%20Matutinas%20💝%20Me%20gustaría%20consultar%20sobre%20sus%20productos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 hover:text-pink-500 flex items-center gap-2 transition-colors"
+              >
+                <Phone className="w-3 h-3" /> WhatsApp: +57 320 276 1748
+              </a>
               <p className="text-xs text-gray-400 flex items-center gap-2"><Mail className="w-3 h-3" /> hola@emocionesmatutinas.com</p>
               <p className="text-xs text-gray-400 flex items-center gap-2"><MapPin className="w-3 h-3" /> Bogotá, Colombia</p>
               <p className="text-xs text-gray-400 flex items-center gap-2"><Clock className="w-3 h-3" /> Lun-Sáb: 7am - 8pm</p>

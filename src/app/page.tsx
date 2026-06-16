@@ -12,6 +12,7 @@ import { CartDrawer } from '@/components/shop/CartDrawer';
 import { CheckoutFlow } from '@/components/shop/CheckoutFlow';
 import { Footer } from '@/components/shop/Footer';
 import { FloatingElements } from '@/components/shop/FloatingElements';
+import { FloatingActions } from '@/components/shop/FloatingActions';
 import { useCartStore } from '@/store/cart-store';
 
 interface Product {
@@ -207,6 +208,9 @@ export default function Home() {
 
       {/* Bottom padding for cart bar */}
       {cartItems.length > 0 && <div className="h-20" />}
+
+      {/* Floating WhatsApp + Scroll to Top */}
+      <FloatingActions />
     </div>
   );
 }

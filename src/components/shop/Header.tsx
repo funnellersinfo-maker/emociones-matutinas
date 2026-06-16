@@ -1,6 +1,6 @@
 'use client';
 
-import { Search, Star, Gift, Truck, ShoppingBag } from 'lucide-react';
+import { Search, Star, Gift, Truck, Clock, Heart, Sparkles, MapPin, ShoppingBag } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
 interface HeaderProps {
@@ -10,24 +10,36 @@ interface HeaderProps {
   onCartClick: () => void;
 }
 
+const marqueeItems = [
+  { icon: Star, text: '4.9 de satisfacción', color: 'text-yellow-200' },
+  { icon: Gift, text: '+4.000 sorpresas compartidas', color: 'text-white' },
+  { icon: Truck, text: 'Entregas programadas en Bogotá', color: 'text-white' },
+  { icon: Clock, text: 'Pedidos hasta las 7pm — entrega el mismo día', color: 'text-pink-100' },
+  { icon: Sparkles, text: 'Nuevos productos cada semana', color: 'text-yellow-200' },
+  { icon: Heart, text: 'Hecho con amor en Colombia', color: 'text-pink-100' },
+  { icon: MapPin, text: 'Cobertura toda Bogotá', color: 'text-white' },
+  { icon: Star, text: 'Más de 2.000 clientes felices', color: 'text-yellow-200' },
+  { icon: Gift, text: 'Dedicatoria gratis en cada pedido', color: 'text-white' },
+  { icon: Truck, text: 'Envío express disponible', color: 'text-white' },
+];
+
 export function Header({ searchQuery, onSearchChange, cartCount, onCartClick }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-pink-100 shadow-sm">
-      {/* Top info bar */}
-      <div className="bg-gradient-to-r from-pink-500 via-rose-400 to-pink-500 text-white text-xs py-1.5 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-4 sm:gap-8 overflow-x-auto hide-scrollbar">
-          <span className="flex items-center gap-1.5 whitespace-nowrap">
-            <Star className="w-3 h-3 fill-yellow-300 text-yellow-300" />
-            4.9 de satisfacción
-          </span>
-          <span className="flex items-center gap-1.5 whitespace-nowrap">
-            <Gift className="w-3 h-3" />
-            +4.000 sorpresas compartidas
-          </span>
-          <span className="flex items-center gap-1.5 whitespace-nowrap">
-            <Truck className="w-3 h-3" />
-            Entregas programadas en Bogotá
-          </span>
+      {/* Marquee Top Bar */}
+      <div className="bg-gradient-to-r from-pink-500 via-rose-400 to-pink-500 text-white text-xs py-1.5 overflow-hidden">
+        <div className="animate-marquee flex items-center whitespace-nowrap">
+          {/* Duplicate the items for seamless loop */}
+          {[...marqueeItems, ...marqueeItems].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <span key={i} className="flex items-center gap-1.5 mx-6">
+                <Icon className={`w-3 h-3 flex-shrink-0 ${item.color}`} />
+                <span className={item.color}>{item.text}</span>
+                <span className="mx-3 text-pink-300/50">•</span>
+              </span>
+            );
+          })}
         </div>
       </div>
 

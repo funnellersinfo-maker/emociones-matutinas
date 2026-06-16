@@ -112,7 +112,7 @@ ${dedication || 'Sin dedicatoria'}
     if (currentStep > 1) setCurrentStep(currentStep - 1);
   };
 
-  const whatsappUrl = `https://wa.me/573001234567?text=${generateWhatsAppMessage()}`;
+  const whatsappUrl = `https://wa.me/573202761748?text=${generateWhatsAppMessage()}`;
 
   return (
     <>
