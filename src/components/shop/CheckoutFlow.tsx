@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Check, MessageCircle, X } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { Input } from '@/components/ui/input';
@@ -13,15 +14,15 @@ interface CheckoutFlowProps {
   onBack: () => void;
 }
 
-const categoryEmojis: Record<string, string> = {
-  peluches: '🧸',
-  flores: '🌹',
-  desayunos: '🎂',
-  globos: '🎈',
-  cumpleanos: '🎁',
-  aniversarios: '💝',
-  personalizados: '✨',
-  sorpresas: '🎉',
+const categoryImages: Record<string, string> = {
+  peluches: '/products/peluche_1.png',
+  flores: '/products/flor_1.png',
+  desayunos: '/products/desayuno_1.png',
+  globos: '/products/globo_1.png',
+  cumpleanos: '/products/cumple_1.png',
+  aniversarios: '/products/aniversario_1.png',
+  personalizados: '/products/personalizado_1.png',
+  sorpresas: '/products/sorpresa_1.png',
 };
 
 function formatPrice(price: number): string {
@@ -168,8 +169,8 @@ ${dedication || 'Sin dedicatoria'}
                 <p className="text-sm text-gray-500">Revisa los productos en tu carrito:</p>
                 {items.map((item) => (
                   <div key={item.id} className="flex items-center gap-3 p-3 bg-pink-50/50 rounded-xl">
-                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                      <span className="text-lg">{categoryEmojis[item.category] || '🎁'}</span>
+                    <div className="w-10 h-10 bg-white rounded-lg overflow-hidden relative">
+                      <Image src={item.image || categoryImages[item.category] || '/products/peluche_1.png'} alt={item.name} fill className="object-cover" sizes="40px" />
                     </div>
                     <div className="flex-1">
                       <p className="text-sm font-semibold text-gray-800">{item.name}</p>
@@ -293,7 +294,7 @@ ${dedication || 'Sin dedicatoria'}
                     <h4 className="text-sm font-bold text-gray-700 mb-2">🛍️ Productos</h4>
                     {items.map((item) => (
                       <div key={item.id} className="flex justify-between text-sm py-1">
-                        <span className="text-gray-600">{categoryEmojis[item.category]} {item.name} x{item.quantity}</span>
+                        <span className="text-gray-600">{item.name} x{item.quantity}</span>
                         <span className="font-medium text-gray-800">{formatPrice(item.price * item.quantity)}</span>
                       </div>
                     ))}

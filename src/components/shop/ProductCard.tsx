@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ShoppingCart, Star } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { toast } from 'sonner';
@@ -24,28 +25,6 @@ interface ProductCardProps {
   product: Product;
 }
 
-const categoryGradients: Record<string, string> = {
-  peluches: 'from-amber-100 via-orange-50 to-yellow-100',
-  flores: 'from-rose-100 via-pink-50 to-red-50',
-  desayunos: 'from-yellow-100 via-amber-50 to-orange-50',
-  globos: 'from-blue-100 via-cyan-50 to-sky-50',
-  cumpleanos: 'from-purple-100 via-pink-50 to-fuchsia-50',
-  aniversarios: 'from-rose-100 via-red-50 to-pink-50',
-  personalizados: 'from-violet-100 via-purple-50 to-indigo-50',
-  sorpresas: 'from-emerald-100 via-teal-50 to-cyan-50',
-};
-
-const categoryEmojis: Record<string, string> = {
-  peluches: '🧸',
-  flores: '🌹',
-  desayunos: '🎂',
-  globos: '🎈',
-  cumpleanos: '🎁',
-  aniversarios: '💝',
-  personalizados: '✨',
-  sorpresas: '🎉',
-};
-
 function formatPrice(price: number): string {
   return new Intl.NumberFormat('es-CO', {
     style: 'currency',
@@ -66,44 +45,50 @@ export function ProductCard({ product }: ProductCardProps) {
       image: product.image,
       category: product.category,
     });
-    toast.success(`${product.name} agregado al carrito 💝`, {
+    toast.success(`${product.name} agregado al carrito`, {
       duration: 2000,
     });
   };
 
-  const gradient = categoryGradients[product.category] || 'from-pink-100 via-rose-50 to-pink-50';
-  const emoji = categoryEmojis[product.category] || '🎁';
-
   return (
     <div className="product-card bg-white rounded-2xl border border-pink-100/50 overflow-hidden group">
       {/* Image area */}
-      <div className={`relative bg-gradient-to-br ${gradient} p-4 pb-3`}>
+      <div className="relative aspect-square bg-pink-50/30 overflow-hidden">
         {/* Badge */}
         {product.badge && (
-          <div className="absolute top-2 left-2 px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold text-pink-600 shadow-sm z-10">
+          <div className="absolute top-2 left-2 z-10 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-full text-[10px] font-bold text-pink-600 shadow-sm">
             {product.badge}
           </div>
         )}
 
         {/* Offer badge */}
         {product.isOffer && (
-          <div className="absolute top-2 right-2 px-2 py-0.5 bg-red-500 rounded-full text-[10px] font-bold text-white shadow-sm z-10">
-            OFERTA 🔥
+          <div className="absolute top-2 right-2 z-10 px-2.5 py-1 bg-red-500 rounded-full text-[10px] font-bold text-white shadow-sm">
+            OFERTA
           </div>
         )}
 
-        {/* Emoji placeholder */}
-        <div className="flex items-center justify-center h-36 sm:h-40">
-          <span className="text-6xl sm:text-7xl group-hover:scale-110 transition-transform duration-300 drop-shadow-sm">
-            {emoji}
-          </span>
-        </div>
+        {/* Product image */}
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-cover group-hover:scale-110 transition-transform duration-500"
+          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+        />
 
         {/* Rating */}
-        <div className="absolute bottom-2 right-2 flex items-center gap-1 px-1.5 py-0.5 bg-white/90 backdrop-blur-sm rounded-full shadow-sm">
+        <div className="absolute bottom-2 right-2 flex items-center gap-1 px-2 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-sm z-10">
           <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
           <span className="text-[10px] font-bold text-gray-700">{product.rating}</span>
         </div>
+
+        {/* Best seller indicator */}
+        {product.isBestSeller && (
+          <div className="absolute bottom-2 left-2 px-2 py-1 bg-pink-500 rounded-full text-[9px] font-bold text-white shadow-sm z-10 uppercase tracking-wider">
+            Best Seller
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -138,4 +123,4 @@ export function ProductCard({ product }: ProductCardProps) {
   );
 }
 
-export { formatPrice, categoryGradients, categoryEmojis };
+export { formatPrice };

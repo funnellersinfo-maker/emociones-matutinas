@@ -1,5 +1,6 @@
 'use client';
 
+import { Search, Package } from 'lucide-react';
 import { ProductCard } from './ProductCard';
 
 interface Product {
@@ -21,16 +22,17 @@ interface Product {
 interface ProductGridProps {
   products: Product[];
   title?: string;
-  emoji?: string;
   id?: string;
   showCount?: boolean;
 }
 
-export function ProductGrid({ products, title, emoji, id, showCount }: ProductGridProps) {
+export function ProductGrid({ products, title, id, showCount }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <div className="text-center py-12">
-        <span className="text-4xl mb-4 block">🔍</span>
+        <div className="w-16 h-16 mx-auto mb-4 bg-pink-50 rounded-full flex items-center justify-center">
+          <Search className="w-8 h-8 text-pink-200" />
+        </div>
         <p className="text-gray-400 text-lg">No se encontraron productos</p>
         <p className="text-gray-300 text-sm">Intenta con otra categoría o búsqueda</p>
       </div>
@@ -41,7 +43,7 @@ export function ProductGrid({ products, title, emoji, id, showCount }: ProductGr
     <section id={id} className="py-6 sm:py-8">
       {title && (
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
-          <span className="text-2xl sm:text-3xl">{emoji}</span>
+          <Package className="w-6 h-6 text-pink-400" />
           <h2 className="text-xl sm:text-2xl font-bold text-gray-800">{title}</h2>
           {showCount && (
             <span className="text-sm text-pink-400 font-medium ml-2">

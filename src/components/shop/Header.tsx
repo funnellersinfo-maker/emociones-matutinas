@@ -1,6 +1,6 @@
 'use client';
 
-import { Search, Star, Gift, Truck, Heart, ShoppingBag } from 'lucide-react';
+import { Search, Star, Gift, Truck, ShoppingBag } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
 interface HeaderProps {
@@ -16,15 +16,15 @@ export function Header({ searchQuery, onSearchChange, cartCount, onCartClick }: 
       {/* Top info bar */}
       <div className="bg-gradient-to-r from-pink-500 via-rose-400 to-pink-500 text-white text-xs py-1.5 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-4 sm:gap-8 overflow-x-auto hide-scrollbar">
-          <span className="flex items-center gap-1 whitespace-nowrap">
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
             <Star className="w-3 h-3 fill-yellow-300 text-yellow-300" />
             4.9 de satisfacción
           </span>
-          <span className="flex items-center gap-1 whitespace-nowrap">
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
             <Gift className="w-3 h-3" />
             +4.000 sorpresas compartidas
           </span>
-          <span className="flex items-center gap-1 whitespace-nowrap">
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
             <Truck className="w-3 h-3" />
             Entregas programadas en Bogotá
           </span>
@@ -40,7 +40,7 @@ export function Header({ searchQuery, onSearchChange, cartCount, onCartClick }: 
               EMOCIONES
             </h1>
             <p className="text-xs sm:text-sm gradient-text font-semibold -mt-1">
-              MATUTINAS 💝
+              MATUTINAS
             </p>
           </div>
 

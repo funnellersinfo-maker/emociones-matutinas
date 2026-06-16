@@ -1,6 +1,7 @@
 'use client';
 
-import { ShoppingCart, Minus, Plus, X, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ShoppingCart, Minus, Plus, X, ArrowRight, ShoppingBag } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 
 function formatPrice(price: number): string {
@@ -18,15 +19,15 @@ interface CartDrawerProps {
   onCheckout: () => void;
 }
 
-const categoryEmojis: Record<string, string> = {
-  peluches: '🧸',
-  flores: '🌹',
-  desayunos: '🎂',
-  globos: '🎈',
-  cumpleanos: '🎁',
-  aniversarios: '💝',
-  personalizados: '✨',
-  sorpresas: '🎉',
+const categoryImages: Record<string, string> = {
+  peluches: '/products/peluche_1.png',
+  flores: '/products/flor_1.png',
+  desayunos: '/products/desayuno_1.png',
+  globos: '/products/globo_1.png',
+  cumpleanos: '/products/cumple_1.png',
+  aniversarios: '/products/aniversario_1.png',
+  personalizados: '/products/personalizado_1.png',
+  sorpresas: '/products/sorpresa_1.png',
 };
 
 export function CartDrawer({ isOpen, onClose, onCheckout }: CartDrawerProps) {
@@ -64,7 +65,9 @@ export function CartDrawer({ isOpen, onClose, onCheckout }: CartDrawerProps) {
         <div className="flex-1 overflow-y-auto p-4 space-y-3">
           {items.length === 0 ? (
             <div className="text-center py-12">
-              <span className="text-5xl block mb-4">🛒</span>
+              <div className="w-20 h-20 mx-auto mb-4 bg-pink-50 rounded-full flex items-center justify-center">
+                <ShoppingBag className="w-10 h-10 text-pink-200" />
+              </div>
               <p className="text-gray-400 font-medium">Tu carrito está vacío</p>
               <p className="text-gray-300 text-sm mt-1">¡Agrega algo bonito!</p>
               <button
@@ -80,9 +83,15 @@ export function CartDrawer({ isOpen, onClose, onCheckout }: CartDrawerProps) {
                 key={item.id}
                 className="flex items-center gap-3 p-3 bg-pink-50/50 rounded-xl border border-pink-100/50"
               >
-                {/* Product emoji */}
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <span className="text-2xl">{categoryEmojis[item.category] || '🎁'}</span>
+                {/* Product image */}
+                <div className="w-14 h-14 bg-white rounded-xl flex-shrink-0 shadow-sm overflow-hidden relative">
+                  <Image
+                    src={item.image || categoryImages[item.category] || '/products/peluche_1.png'}
+                    alt={item.name}
+                    fill
+                    className="object-cover"
+                    sizes="56px"
+                  />
                 </div>
 
                 {/* Info */}

@@ -135,7 +135,6 @@ export default function Home() {
               <SpecialSection
                 id="mas-vendidos"
                 title="Más vendidos"
-                emoji="⭐"
                 subtitle="Los favoritos de nuestros clientes esta semana"
                 products={bestSellers}
                 gradient="bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border border-yellow-100/50"
@@ -144,7 +143,6 @@ export default function Home() {
               <SpecialSection
                 id="ofertas"
                 title="Promociones del día"
-                emoji="🔥"
                 subtitle="¡Aprovecha estas ofertas antes de que se acaben!"
                 products={offers}
                 gradient="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 border border-red-100/50"
@@ -153,7 +151,6 @@ export default function Home() {
               <SpecialSection
                 id="recomendados"
                 title="Regalos que enamoran"
-                emoji="💝"
                 subtitle="Selección especial para conquistar corazones"
                 products={recommended}
                 gradient="bg-gradient-to-br from-pink-50 via-rose-50 to-fuchsia-50 border border-pink-100/50"
@@ -174,7 +171,6 @@ export default function Home() {
                 ? 'Todo nuestro catálogo'
                 : undefined
             }
-            emoji={searchQuery ? '🔍' : '🛍️'}
             showCount={true}
           />
 

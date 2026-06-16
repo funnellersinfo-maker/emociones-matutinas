@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { ShoppingBag, TrendingUp, Heart } from 'lucide-react';
 
 export function HeroBanner() {
   return (
@@ -23,15 +24,15 @@ export function HeroBanner() {
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full">
           <div className="max-w-lg space-y-4 sm:space-y-6">
-            {/* Floating hearts decoration */}
+            {/* Decorative accent */}
             <div className="flex items-center gap-2">
-              <span className="animate-float text-2xl" style={{ animationDelay: '0s' }}>💝</span>
-              <span className="animate-float text-lg" style={{ animationDelay: '0.5s' }}>✨</span>
-              <span className="animate-float text-xl" style={{ animationDelay: '1s' }}>💝</span>
+              <Heart className="w-6 h-6 text-pink-300 animate-float" fill="currentColor" />
+              <div className="w-8 h-px bg-pink-300/60" />
+              <span className="text-pink-200 text-xs font-medium tracking-widest uppercase">Regalos con alma</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight drop-shadow-lg">
-              Haz sonreír a quien más amas <span className="inline-block animate-pulse-soft">💝</span>
+              Haz sonreír a quien más amas
             </h2>
 
             <p className="text-base sm:text-lg text-pink-100/90 leading-relaxed drop-shadow">
@@ -43,13 +44,15 @@ export function HeroBanner() {
                 href="#productos"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
               >
-                🎁 Comprar ahora
+                <ShoppingBag className="w-4 h-4" />
+                Comprar ahora
               </a>
               <a
                 href="#mas-vendidos"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-medium rounded-full border border-white/30 transition-all duration-300 text-sm sm:text-base"
               >
-                ⭐ Más vendidos
+                <TrendingUp className="w-4 h-4" />
+                Más vendidos
               </a>
             </div>
           </div>
