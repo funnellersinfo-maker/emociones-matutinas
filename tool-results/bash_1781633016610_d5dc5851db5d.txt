@@ -1,0 +1,1024 @@
+
+🎨 Generating 87 missing product images...
+
+
+📦 Batch 1/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [4/87] Failed: flores_caja-rosas-y-chocolates.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [1/87] Failed: peluches_perro-salchicha-divertido.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [3/87] Failed: flores_ramo-rosas-rojas-premium.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [5/87] Generated: flores_ramo-girasoles-alegria.png (110KB)
+  ✅ [2/87] Generated: peluches_mapache-travieso.png (95KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 2/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [10/87] Failed: flores_corona-floral-elegante.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [8/87] Failed: flores_cesta-flores-y-frutas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [9/87] Failed: flores_ramo-peonias-delicadas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [7/87] Generated: flores_ramo-tulipanes-holanda.png (119KB)
+  ✅ [6/87] Generated: flores_arreglo-tropical-exotico.png (135KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 3/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [15/87] Failed: flores_ramo-rosas-arcoiris.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [14/87] Failed: flores_arreglo-orquideas-colombianas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [13/87] Failed: flores_ramo-margaritas-campo.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [12/87] Generated: flores_caja-sombrero-florecida.png (114KB)
+  ✅ [11/87] Generated: flores_ramo-lavanda-relax.png (162KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 4/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [20/87] Failed: flores_caja-cristal-rosas-eternas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [19/87] Failed: flores_ramo-claveles-rojos.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [18/87] Failed: flores_bouquet-novia-sonado.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [17/87] Generated: flores_ramo-lirios-blancos-paz.png (76KB)
+  ✅ [16/87] Generated: flores_centro-mesa-floral.png (144KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 5/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [23/87] Failed: desayunos_desayuno-waffles-belgas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [24/87] Failed: globos_globo-caja-explosion.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [25/87] Failed: globos_numero-gigante-metalico.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [21/87] Generated: flores_ramo-astromelias-mix.png (129KB)
+  ✅ [22/87] Generated: flores_arreglo-bonsai-floral.png (125KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 6/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [30/87] Failed: globos_globos-unicornio-magico.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [28/87] Failed: globos_bouquet-globos-baby-shower.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [29/87] Failed: globos_globo-sorpresa-interior.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [27/87] Generated: globos_globos-letras-nombre.png (98KB)
+  ✅ [26/87] Generated: globos_columna-globos-elegante.png (54KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 7/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [33/87] Failed: globos_bouquet-globos-arcoiris.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [34/87] Failed: globos_globos-pedida-matrimonio.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [35/87] Failed: globos_globos-disney-princesas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ✅ [31/87] Generated: globos_globos-navidad-festivos.png (108KB)
+  ✅ [32/87] Generated: globos_globos-graduacion-exito.png (100KB)
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 8/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [36/87] Failed: globos_globos-spiderman-heroe.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [40/87] Failed: globos_globos-empresariales-corp.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [39/87] Failed: globos_globos-rosas-eternas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [38/87] Failed: globos_globos-minions-fiesta.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [37/87] Failed: globos_globos-bodas-elegantes.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 9/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [44/87] Failed: cumpleanos_regalo-cumple-15-elegante.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [45/87] Failed: cumpleanos_cena-cumpleanos-dos.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [42/87] Failed: cumpleanos_torta-numero-gigante.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [41/87] Failed: globos_globos-cumple-quinceanera.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [43/87] Failed: cumpleanos_cumpleanos-sorpresa-oficina.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 10/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [46/87] Failed: cumpleanos_cumple-sorpresa-mascota.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [47/87] Failed: cumpleanos_video-mensajes-cumpleanos.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [48/87] Failed: aniversarios_aniversario-silver-luxe.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [50/87] Failed: aniversarios_cena-romantica-para-dos.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [49/87] Failed: aniversarios_caja-amor-eterno.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 11/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [51/87] Failed: aniversarios_combo-aniversario-rosa.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [52/87] Failed: aniversarios_set-vino-y-quesos.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [55/87] Failed: aniversarios_serenata-vallenata.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [54/87] Failed: aniversarios_carta-mapa-estrellas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [53/87] Failed: aniversarios_experiencia-en-pareja.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 12/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [57/87] Failed: aniversarios_anillo-compromiso-set.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [56/87] Failed: aniversarios_album-recuerdos-premium.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [59/87] Failed: aniversarios_pulsera-nombres-enamorados.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [60/87] Failed: aniversarios_caja-sentimientos-cartas.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [58/87] Failed: aniversarios_finde-escapada-romantica.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 13/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [62/87] Failed: aniversarios_collar-corazones-dos.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [61/87] Failed: aniversarios_renovacion-votos-set.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [65/87] Failed: aniversarios_foto-libro-nuestra-historia.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [63/87] Failed: aniversarios_noche-estrellada-terraza.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [64/87] Failed: aniversarios_set-aromaterapia-pareja.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 14/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [66/87] Failed: personalizados_manta-foto-grande.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [67/87] Failed: personalizados_set-copa-grabada-pareja.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [68/87] Failed: sorpresas_mega-sorpresa-ultimate.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [69/87] Failed: sorpresas_sorpresa-parranda.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [70/87] Failed: sorpresas_sorpresa-box-misteriosa.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 15/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [71/87] Failed: sorpresas_sorpresa-medianoche.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [72/87] Failed: sorpresas_sorpresa-flash-mob.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [75/87] Failed: sorpresas_sorpresa-viaje-sorpresa.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [73/87] Failed: sorpresas_sorpresa-globos-cielo.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [74/87] Failed: sorpresas_sorpresa-mensaje-arena.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 16/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [76/87] Failed: sorpresas_sorpresa-decoracion-hogar.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [77/87] Failed: sorpresas_sorpresa-comida-favorita.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [80/87] Failed: sorpresas_sorpresa-clase-privada.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [79/87] Failed: sorpresas_sorpresa-grabacion-familiar.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [78/87] Failed: sorpresas_sorpresa-foto-gigante.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 17/18: Generating 5 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [81/87] Failed: sorpresas_sorpresa-scavenger-hunt.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [82/87] Failed: sorpresas_sorpresa-picnic-romantico.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [84/87] Failed: sorpresas_sorpresa-concierto-privado.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [85/87] Failed: sorpresas_sorpresa-cine-privado.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [83/87] Failed: sorpresas_sorpresa-room-service.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+  ⏳ Waiting 2s before next batch...
+
+📦 Batch 18/18: Generating 2 images...
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [86/87] Failed: sorpresas_sorpresa-maquillaje-glam.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async <anonymous> (/home/z/my-project/generate-missing-images.ts:147:55)
+      at async generateImages (/home/z/my-project/generate-missing-images.ts:166:19)
+
+  ❌ [87/87] Failed: sorpresas_sorpresa-amanecer-montana.png - API request failed with status 429: {"error":"Too many requests, please try again later"}
+
+🎉 Generation complete!
+   ✅ Success: 14
+   ❌ Failed: 73
+   ⏭️  Skipped: 0

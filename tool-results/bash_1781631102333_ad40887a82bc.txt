@@ -1,0 +1,451 @@
+🎨 Generating: cumpleanos_torta-numero-gigante.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Giant number shaped birthday cake with buttercream frosting and edible flowers, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: cumpleanos_torta-numero-gigante.png
+🎨 Generating: cumpleanos_cumpleanos-sorpresa-oficina.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Office birthday surprise with mini cake, balloon and desk decoration, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: cumpleanos_cumpleanos-sorpresa-oficina.png
+🎨 Generating: cumpleanos_regalo-cumple-15-elegante.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Elegant quinceanera gift set with tiara and crystal bracelet in pink box, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: cumpleanos_regalo-cumple-15-elegante.png
+🎨 Generating: cumpleanos_cena-cumpleanos-dos.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Romantic birthday dinner for two with candlelight and champagne at restaurant, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: cumpleanos_cena-cumpleanos-dos.png
+🎨 Generating: cumpleanos_cumple-sorpresa-mascota.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Pet birthday combo with gourmet treats, bandana and small toy, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: cumpleanos_cumple-sorpresa-mascota.png
+🎨 Generating: cumpleanos_video-mensajes-cumpleanos.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Video message compilation gift with tablet showing family messages and gift box, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: cumpleanos_video-mensajes-cumpleanos.png
+🎨 Generating: aniversarios_aniversario-silver-luxe.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Silver anniversary luxury set with silver necklace, white roses and champagne bottle, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_aniversario-silver-luxe.png
+🎨 Generating: aniversarios_caja-amor-eterno.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Amor Eterno engraved wooden box with scented candles, chocolates and photo frame inside, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_caja-amor-eterno.png
+🎨 Generating: aniversarios_cena-romantica-para-dos.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Romantic candlelit dinner for two with wine, flowers and elegant table setting, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_cena-romantica-para-dos.png
+🎨 Generating: aniversarios_combo-aniversario-rosa.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Classic anniversary combo with red roses bouquet, teddy bear and chocolate box, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_combo-aniversario-rosa.png
+🎨 Generating: aniversarios_set-vino-y-quesos.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Wine and cheese set with reserve wine bottle and artisanal cheese board with tools, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_set-vino-y-quesos.png
+🎨 Generating: aniversarios_experiencia-en-pareja.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Couple experience gift box for spa, cooking class or boat ride with voucher and items, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_experiencia-en-pareja.png
+🎨 Generating: aniversarios_carta-mapa-estrellas.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Personalized star map of the night sky framed art print, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_carta-mapa-estrellas.png
+🎨 Generating: aniversarios_serenata-vallenata.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Vallenato serenade gift with accordion, sombrero vueltiao and musicians arrangement, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_serenata-vallenata.png
+🎨 Generating: aniversarios_album-recuerdos-premium.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Premium leather photo album for couple memories with elegant binding, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_album-recuerdos-premium.png
+🎨 Generating: aniversarios_anillo-compromiso-set.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Engagement ring set in velvet box surrounded by rose petals, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_anillo-compromiso-set.png
+🎨 Generating: aniversarios_finde-escapada-romantica.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Romantic weekend getaway package with hotel voucher, map and travel items, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_finde-escapada-romantica.png
+🎨 Generating: aniversarios_pulsera-nombres-enamorados.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Two silver bracelets with couple names engraved in elegant gift box, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_pulsera-nombres-enamorados.png
+🎨 Generating: aniversarios_caja-sentimientos-cartas.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Wooden box with 365 love letters one for each day, romantic gift, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_caja-sentimientos-cartas.png
+🎨 Generating: aniversarios_renovacion-votos-set.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Vow renewal ceremony set with unity candles, certificate and ribbon, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_renovacion-votos-set.png
+🎨 Generating: aniversarios_collar-corazones-dos.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Silver necklace with two intertwined hearts pendant, engravable, in jewelry box, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_collar-corazones-dos.png
+🎨 Generating: aniversarios_noche-estrellada-terraza.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Private terrace dinner under stars with candles and rose petals arrangement, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_noche-estrellada-terraza.png
+🎨 Generating: aniversarios_set-aromaterapia-pareja.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Aromatherapy kit for couples with scented candles, essential oils and bath salts, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_set-aromaterapia-pareja.png
+🎨 Generating: aniversarios_foto-libro-nuestra-historia.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Professional photo book with couple story, 40 pages, hardcover, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+❌ Failed: aniversarios_foto-libro-nuestra-historia.png
+🎨 Generating: aniversarios_baile-sorpresa-aniversario.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Private dance class gift for two with salsa or bachata, voucher and dance shoes, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+✅ File saved to: /home/z/my-project/public/products/aniversarios_baile-sorpresa-aniversario.png
+🎉 Image generation completed!
+✅ Done: aniversarios_baile-sorpresa-aniversario.png
+🎨 Generating: aniversarios_caja-te-recuerdo.png
+🚀 Initializing Z-AI SDK...
+🎨 Generating image: "Ultra-realistic professional product photography of Personalized memory box with keepsakes compartments and engraved lid, luxury gift shop e-commerce style, clean white background, soft studio lighting, premium presentation, 4K quality"
+📐 Size: 1024x1024
+✅ File saved to: /home/z/my-project/public/products/aniversarios_caja-te-recuerdo.png
+🎉 Image generation completed!
+✅ Done: aniversarios_caja-te-recuerdo.png
+==========================================
+📊 FINAL COUNT
+Cumpleaños + Aniversarios images: 16 / 40
+
+stderr:
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make image generation request: 260 |                 headers: headers,
+261 |                 body: JSON.stringify(requestBody),
+262 |             });
+263 |             if (!response.ok) {
+264 |                 const errorBody = await response.text();
+265 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createImageGeneration (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/index.js:265:27)
+      at async handleImage (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:716:54)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1077:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}

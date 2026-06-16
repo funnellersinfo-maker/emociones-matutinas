@@ -1,0 +1,250 @@
+     1→import { db } from '../src/lib/db';
+     2→
+     3→type P = [string, string, string, number, number?, string?, number?, boolean?, boolean?, boolean?];
+     4→interface CC { c: {n:string;h:string}[]; s: {n:string;d:number}[]; f: string[]; b: {n:string;d:number;desc:string}[]; p: P[] }
+     5→
+     6→const C: Record<string, CC> = {
+     7→peluches:{c:[{n:'Rosa',h:'#f9a8d4'},{n:'Blanco',h:'#fef2f2'},{n:'Beige',h:'#e8c9a0'},{n:'Gris',h:'#d1d5db'},{n:'Lavanda',h:'#c4b5fd'}],s:[{n:'Pequeño 30cm',d:-25000},{n:'Mediano 50cm',d:0},{n:'Grande 80cm',d:30000},{n:'Gigante 120cm',d:75000}],f:['Confeccionado a mano','Microfibra hipoalergénica','Entrega con dedicatoria','Envoltura regalo incluida'],b:[{n:'Tarjeta dedicatoria artesanal',d:5000,desc:'Tarjeta hecha a mano con tu mensaje'},{n:'Caja de chocolates belgas',d:25000,desc:'12 chocolates artesanales'},{n:'Globo metálico personalizado',d:12000,desc:'Globo foil con mensaje'}],p:[
+     8→['Oso Gigante Premium','Oso de peluche de 80cm, ultra suave','Majestuoso oso de microfibra premium con relleno que mantiene la forma perfecta. Ideal para sorprender en cumpleaños o aniversarios.',89000,null,'Popular',4.9,true,null,true],
+     9→['Conejo de Pelo Largo','Conejito suave con orejas largas','Adorable conejito de pelo sedoso. Materiales certificados safe para todas las edades.',55000,null,'Nuevo',4.7,null,null,true],
+    10→['Unicornio Arcoíris','Unicornio mágico con crín colorida','Unicornio con crín de colores y cuerno brillante. Relleno extra suave.',67000,null,'Favorito',4.8,true,null,true],
+    11→['Oso de Rosas Rojo','Oso hecho con rosas artificiales','Oso formado por cientos de rosas en rojo intenso. Pieza decorativa que nunca se marchita.',129000,null,'Exclusivo',5.0,true,null,true],
+    12→['Peluche Corazón Gigante','Corazón rojo con mensaje bordado','Enorme corazón con "Te Amo" bordado en dorado. El regalo romántico por excelencia.',72000,null,'Romántico',4.9,null,null,true],
+    13→['Gato Bigotes Suave','Gatito con bigotes y cola movible','Gatito con bigotes de hilo y cola articulada. Pelaje gris ultra suave.',45000,null,4.6],
+    14→['Perro Salchicha Divertido','Perrito salchicha con cuerpo alargado','Cuerpo alargado y patitas cortas. Expresión tierna y textura extra suave.',42000,55000,'Divertido',4.5,null,true],
+    15→['Peluche Estrella Brillante','Estrella con luces LED integradas','Estrella mágica que ilumina las noches. Lámpara de noche con temporizador.',58000,null,'Luminoso',4.8,null,null,true],
+    16→['Oso Polar Ártico','Oso polar blanco extra peludo','Pelaje blanco denso. Ojos negros y nariz bordada.',78000,null,4.7],
+    17→['Dinosaurio T-Rex Tierno','T-Rex verde con gorrito','T-Rex con gorrito tejido. Perfecto para pequeños paleontólogos.',52000,65000,'Cool',4.6,null,true],
+    18→['Panda Abrazo Grande','Panda gigante blanco y negro','Suavidad de nubes. Brazos para el abrazo más cálido.',95000,null,'Clásico',4.9,true,null,true],
+    19→['Zorro Bosque Mágico','Zorrito naranja con cola esponjosa','Zorrito con cola extra esponjosa. Inspirado en cuentos de hadas.',49000,null,4.5],
+    20→['Peluche Nube Suave','Nube blanca con cara kawaii','Nube kawaii con carita sonriente. La más suave de la colección.',38000,null,'Kawaii',4.7,null,null,true],
+    21→['Elefante Fortuna','Elefantito gris con sombrero dorado','Elefante de la suerte. La trompa hacia arriba atrae buena fortuna.',47000,null,'Suerte',4.6],
+    22→['Oso Bufanda Roja','Oso clásico con bufanda tejida','Oso con bufanda tejida roja. Pelaje marrón suave como la miel.',63000,null,4.8,null,null,true],
+    23→['Conejito Pascua','Conejo con canasta de huevos','Conejo de Pascua con canasta de huevitos. Orejas posables.',51000,null,'Temporada',4.5],
+    24→['Peluche Llama Andina','Llama con poncho tejido colombiano','Llama con poncho artesanal colombiano. Pelaje esponjoso.',69000,null,'Colombiano',4.8,null,null,true],
+    25→['Pulpo Abrazos 8 Brazos','Pulpo con 8 tentáculos abrazables','8 tentáculos para abrazos. Colores vibrantes y textura suave.',54000,null,'Original',4.7],
+    26→['Peluche Cuidador Emocional','Peluche terapéutico con peso y lavanda','Peso calibrado de abrazo profundo y bolsa de lavanda. Recomendado por terapeutas.',82000,null,'Bienestar',4.9,true,null,true],
+    27→['Mapache Travieso','Mapache con antifaz y cola rayada','Mapache con cola esponjosa. Expresión traviesa.',53000,68000,null,4.6,null,true]]},
+    28→
+    29→flores:{c:[{n:'Rojo',h:'#ef4444'},{n:'Rosa',h:'#f9a8d4'},{n:'Blanco',h:'#fef2f2'},{n:'Amarillo',h:'#fbbf24'},{n:'Lavanda',h:'#c4b5fd'}],s:[{n:'Bucle 6 rosas',d:-20000},{n:'Ramo 12 rosas',d:0},{n:'Ramo 24 rosas',d:35000},{n:'Ramo 50 rosas',d:80000}],f:['Flores frescas del día','Envoltura elegante','Tarjeta dedicatoria incluida','Entrega cuidadosa'],b:[{n:'Agregar chocolates Godiva',d:35000,desc:'Caja de 8 chocolates'},{n:'Incluir botella de vino',d:45000,desc:'Vino espumoso'},{n:'Agregar peluche pequeño',d:22000,desc:'Osito acompañante'}],p:[
+    30→['Ramo Rosas Rojas Premium','12 rosas ecuatorianas con follaje','Ramo de 12 rosas ecuatorianas de apertura perfecta. Follaje verde y papel kraft.',95000,null,'Clásico',4.9,true,null,true],
+    31→['Caja Rosas y Chocolates','Caja de madera con rosas y chocolates','Caja de madera con rosas y chocolates artesanales colombianos.',135000,null,'Premium',5.0,true,null,true],
+    32→['Ramo Girasoles Alegría','Girasoles frescos con margaritas','Ramo lleno de luz con girasoles de tallo largo. Energía positiva.',78000,null,'Alegre',4.7,null,null,true],
+    33→['Arreglo Tropical Exótico','Aves del paraíso y heliconias','Arreglo exótico con aves del paraíso y follaje tropical colombiano.',112000,null,'Exótico',4.8],
+    34→['Ramo Tulipanes Holanda','Tulipanes importados colores mixtos','Tulipanes de Holanda. Se abren gradualmente por días.',125000,null,'Importado',4.9,null,null,true],
+    35→['Cesta Flores y Frutas','Cesta con flores y frutas tropicales','Cesta artesanal con flores y frutas: mango, papaya, fresas.',99000,null,'Completo',4.7],
+    36→['Ramo Peonías Delicadas','Peonías rosas y blancas','Peonías como nubes de pétalos. Disponibilidad limitada.',155000,null,'Lujo',5.0,true,null,true],
+    37→['Corona Floral Elegante','Corona de flores para evento','Corona elegante con flores de temporada.',145000,null,'Evento',4.6],
+    38→['Ramo Lavanda Relax','Lavanda fresca aroma relajante','Lavanda con aroma relajante. Seca manteniendo fragancia semanas.',58000,72000,'Relajante',4.5,null,true],
+    39→['Caja Sombrero Florecida','Caja sombrero con arreglo floral','Caja sombrero con rosas y claveles. Recuerdo decorativo.',118000,null,'Elegante',4.8,null,null,true],
+    40→['Ramo Margaritas Campo','Margaritas blancas centro amarillo','Ramo campestre de margaritas frescas.',45000,58000,'Campestre',4.4,null,true],
+    41→['Arreglo Orquídeas Colombianas','Orquídeas auténticas colombianas','Orquídeas colombianas, la flor nacional.',168000,null,'Nacional',5.0,true,null,true],
+    42→['Ramo Rosas Arcoíris','Rosas en todos los colores','Rosas en cada color del arcoíris. Técnica holandesa.',105000,null,'Colorido',4.7,null,null,true],
+    43→['Centro Mesa Floral','Centro de mesa con velas y flores','Flores con velas aromáticas. Escenario romántico garantizado.',88000,null,'Cena',4.6],
+    44→['Ramo Lirios Blancos Paz','Lirios blancos perfume intenso','Lirios de perfume embriagador. Revelan su belleza interior.',85000,null,'Paz',4.7],
+    45→['Bouquet Novia Soñado','Ramo de novia rosas y paso a paso','Ramo de novia: rosas blancas con perlitas. Personalizable.',185000,null,'Novia',5.0,null,null,true],
+    46→['Ramo Claveles Rojos','Claveles rojos grandes y frescos','Claveles que duran hasta dos semanas.',55000,69000,'Duradero',4.5,null,true],
+    47→['Caja Cristal Rosas Eternas','Caja cristal con rosas preservadas','Rosas eternas que duran hasta 3 años. Pieza de lujo.',195000,null,'Eterno',5.0,true,null,true],
+    48→['Ramo Astromelias Mix','Astromelias colores vibrantes','Astromelias colombianas en múltiples colores.',38000,48000,'Económico',4.3,null,true],
+    49→['Arreglo Bonsái Floral','Mini bonsái decorado con flores','Bonsái con flores frescas. Fusión japonesa-colombiana.',138000,null,'Oriental',4.8]]},
+    50→
+    51→desayunos:{c:[{n:'Clásico',h:'#d4a574'},{n:'Rosa',h:'#f9a8d4'},{n:'Verde',h:'#86efac'},{n:'Azul',h:'#93c5fd'}],s:[{n:'Individual',d:0},{n:'Pareja',d:25000},{n:'Familiar',d:45000}],f:['Ingredientes frescos del día','Preparado artesanalmente','Dedicatoria en bandeja','Entrega puntual 7am-9am'],b:[{n:'Agregar botella de vino',d:40000,desc:'Vino espumoso'},{n:'Incluir ramo de flores',d:35000,desc:'Ramo pequeño de rosas'},{n:'Agregar peluche pequeño',d:18000,desc:'Osito acompañante'}],p:[
+    52→['Desayuno Sorpresa Completo','Frutas, arepa, huevos y jugo','Bandeja con frutas tropicales, arepa con queso, huevos, jugo, café y pan dulce.',75000,null,'Popular',4.9,true,null,true],
+    53→['Desayuno Campestre Parrilla','Carnes a la parrilla y arepas','Chicharrón, carnes asadas, arepas, huevos pericos, chocolate. En canasta de madera.',95000,null,'Abundante',4.8,null,null,true],
+    54→['Desayuno Frutas Tropicales','Frutas con yogur y granola','Mango, papaya, fresas, kiwi con yogur griego, granola y miel.',68000,null,'Saludable',4.7,null,null,true],
+    55→['Desayuno Romántico Pareja','Para dos con champagne y flores','Huevos benedictinos, croissants, champagne. Pétalos y vela.',135000,null,'Romántico',5.0,true,null,true],
+    56→['Desayuno Pancakes Especiales','Torre de pancakes con frutas y miel','Pancakes con frutas, miel maple, crema batida. Jugo y café.',72000,null,'Dulce',4.8],
+    57→['Desayuno Colombiano Tradicional','Tamal, chocolate, queso, almojábana','Tamal tolimense, chocolate santafereño, almojábana, huevos.',58000,72000,'Tradicional',4.6,null,true],
+    58→['Desayuno Vip Ejecutivo','Gourmet con salmón y bagel','Bagel con salmón, queso crema, café especial y jugo verde.',115000,null,'VIP',4.9,null,null,true],
+    59→['Desayuno Infantil Divertido','Temático con formas divertidas','Pancakes de animales, frutas en estrellas, jugo de colores.',52000,null,'Niños',4.7],
+    60→['Desayuno Waffles Belgas','Waffles con nutella y fresas','Waffles belgas con Nutella, fresas, helado. Capuchino y jugo.',78000,null,'Belga',4.8,null,null,true],
+    61→['Desayuno Detox Verde','Smoothies y bowls saludables','Smoothie verde, açaí bowl, tostada integral con palta. Té matcha.',65000,null,'Detox',4.5],
+    62→['Desayuno Tarta Cumpleaños','Con mini tarta de cumpleaños','Mini tarta con velitas, croissants, frutas, café y jugo.',88000,null,'Cumpleaños',4.9,null,null,true],
+    63→['Desayuno Café Especial','Cata de cafés de especialidad','3 cafés colombianos, galletas, arepa de choclo. Bolsa café regalo.',92000,null,'Café',4.8,null,null,true],
+    64→['Desayuno Cesta Premium','Cesta gourmet productos colombianos','Cesta: quesos, embutidos, mermeladas, café, chocolate, pan artesanal.',148000,null,'Gourmet',5.0,true,null,true],
+    65→['Desayuno Arepas Gourmet','Arepas con diferentes rellenos','Cuatro arepas: pollo, carnes, queso, vegetariana. Ají y guacamole.',62000,78000,'Arepero',4.6,null,true],
+    66→['Desayuno Croissants París','Croissants con mermeladas artesanales','Croissants, pain au chocolat, mermeladas, café au lait.',82000,null,'Francés',4.7],
+    67→['Desayuno Enamorados Cama','Bandeja corazón para servir en cama','Bandeja corazón con huevos, tostadas, frutas. Pétalos y vela.',105000,null,'Amor',4.9,null,null,true],
+    68→['Desayuno Bowl Power','Bowls energéticos con superfoods','Açaí bowl, bowl de quinoa con aguacate. Smoothie y té matcha.',70000,null,'Power',4.6],
+    69→['Desayuno Mimosa Brunch','Brunch con mimosas y postre','Huevos benedictinos, tablado quesos, mimosas, mini cheesecake.',125000,null,'Brunch',4.8,null,null,true],
+    70→['Desayuno Chocolate Caliente','Chocolate santafereño con todo','Chocolate espeso con queso, pan, buñuelos, huevos pericos.',55000,68000,'Cálido',4.5,null,true],
+    71→['Desayuno Sorpresa Nocturno','Entregado al amanecer con serenata','Desayuno a las 5am con serenata. Incluye flores y tarjeta.',165000,null,'Amanecer',5.0,true,null,true]]},
+    72→
+    73→globos:{c:[{n:'Rojo',h:'#ef4444'},{n:'Rosa',h:'#f9a8d4'},{n:'Dorado',h:'#d4a574'},{n:'Azul',h:'#60a5fa'},{n:'Multicolor',h:'#fbbf24'}],s:[{n:'Bucle 5 globos',d:0},{n:'Ramo 10 globos',d:20000},{n:'Arco 20 globos',d:50000}],f:['Globos de helio premium','Arreglo personalizado','Lazo decorativo incluido','Entrega sin reventar'],b:[{n:'Agregar peluche pequeño',d:18000,desc:'Osito colgante'},{n:'Incluir caja de chocolates',d:25000,desc:'8 chocolates'},{n:'Agregar tarjeta sonora',d:8000,desc:'Tarjeta con mensaje grabado'}],p:[
+    74→['Bouquet Globos Feliz Cumple','Ramo globos diseño de cumpleaños','Globos de helio con diseños de cumpleaños, estrellas y confeti.',45000,null,'Fiesta',4.7,true,null,true],
+    75→['Arco Globos Romántico','Arco globos rojos y rosas con luces','Arco con luces LED. Instalación incluida en Bogotá.',185000,null,'Romántico',4.9,null,null,true],
+    76→['Globo Caja Explosión','Caja con globos que saltan al abrir','Caja que libera globos y confeti. Regalo escondido. Sorpresa viral.',95000,null,'Viral',5.0,true,null,true],
+    77→['Número Gigante Metálico','Globo número de foil metálico','Globo gigante foil número 0-9. Helio premium 2 semanas.',35000,null,'Número',4.8,true],
+    78→['Columna Globos Elegante','Columna decorativa 1.8m evento','Columna de 1.8m con base estabilizadora.',125000,null,'Evento',4.7],
+    79→['Globos Letras Nombre','Globos foil formando nombre','Globos foil de 40cm con helio premium.',65000,null,'Personalizado',4.8,null,null,true],
+    80→['Bouquet Globos Baby Shower','Globos tonos pastel baby shower','Diseños de mamadera y zapatito. Globo "Welcome Baby".',55000,null,'Baby',4.6],
+    81→['Globo Sorpresa Interior','Globo gigante con regalo y confeti','Globo transparente 90cm. Regalo al reventar.',85000,null,'Misterio',4.9,null,null,true],
+    82→['Globos Unicornio Mágico','Set globos tema unicornio','Globo foil unicornio 80cm, globos rosa, violeta y estrellas.',72000,null,'Mágico',4.7],
+    83→['Globos Navidad Festivos','Globos temáticos navideños','Renos, copos de nieve, Santa. Rojo, verde y dorado.',68000,85000,'Navidad',4.5,null,true],
+    84→['Globos Graduación Éxito','Globos con birrete de graduación','Globo foil birrete, números del año, colores institucionales.',58000,null,'Graduación',4.6],
+    85→['Bouquet Globos Arcoíris','Ramo de globos en todos los colores','10 globos de látex premium en cada color.',42000,55000,'Colorido',4.5,null,true],
+    86→['Globos Pedida Matrimonio','Set romántico letras ¿Te casas?','Letras foil "¿Te Casas Conmigo?" con globos rojo y dorado.',155000,null,'Pedida',5.0,true,null,true],
+    87→['Globos Disney Princesas','Globos con personajes Disney','Princesas Disney en foil de alta calidad.',78000,null,'Disney',4.7],
+    88→['Globos Spiderman Héroe','Globos temáticos Spiderman','Globo foil gigante Spiderman, globos rojo y azul.',65000,null,'Héroe',4.6],
+    89→['Globos Bodas Elegantes','Set globos elegantes para boda','Globos blanco y dorado, lazos de organza. "Mr & Mrs".',165000,null,'Boda',4.9,null,null,true],
+    90→['Globos Minions Fiesta','Globos con tema Minions','Globos foil Minions, globos amarillo y azul.',62000,78000,'Minions',4.5,null,true],
+    91→['Globos Rosas Eternas','Globos foil forma de rosa','Globos rosa gigante en rojo, rosa y dorado.',48000,null,'Rosa',4.7],
+    92→['Globos Empresariales Corp','Globos con logo corporativo','Globos impresos con logo y colores corporativos.',85000,null,'Corp',4.4],
+    93→['Globos Cumple Quinceañera','Set especial para quinceañera','Globos rosa y dorado, número "15" gigante, corona foil.',98000,null,'Quince',4.8,null,null,true]]},
+    94→
+    95→cumpleanos:{c:[{n:'Multicolor',h:'#fbbf24'},{n:'Rosa',h:'#f9a8d4'},{n:'Azul',h:'#60a5fa'},{n:'Dorado',h:'#d4a574'}],s:[{n:'Básico',d:0},{n:'Premium',d:30000},{n:'Deluxe',d:60000}],f:['Personalizado para ti','Empaque fiesta incluido','Tarjeta de cumpleaños','Entrega el día indicado'],b:[{n:'Agregar torta pequeña',d:35000,desc:'Torta individual con velitas'},{n:'Incluir serenata',d:45000,desc:'Serenata de 3 canciones'},{n:'Agregar corona cumpleaños',d:8000,desc:'Corona brillante'}],p:[
+    96→['Combo Cumpleaños Completo','Globos, flores, torta y serenata','Ramo de flores, 10 globos, mini torta y tarjeta.',165000,null,'Completo',5.0,true,null,true],
+    97→['Caja Sorpresa Cumpleañera','Caja con regalos sorpresa temáticos','Caja misteriosa: confeti, regalo, dulces y carta sorpresa.',95000,null,'Sorpresa',4.8,true,null,true],
+    98→['Cumple Sorpresa Medianoche','Sorpresa a media noche con velas','A media noche con velas, torta, globos y canción.',145000,null,'Medianoche',5.0,true,null,true],
+    99→['Kit Fiesta Cumpleaños','Decoración completa para fiesta','Guirnalda, 20 globos, mantel, servilletas y centros de mesa.',85000,null,'Fiesta',4.6],
+   100→['Torta Personalizada Entrega','Torta decorada con entrega y velitas','Torta artesanal decorada. Sabores: chocolate, vainilla, red velvet.',78000,null,'Torta',4.8,null,null,true],
+   101→['Piñata Cumpleaños Grande','Piñata rellena de dulces y sorpresas','Piñata artesanal rellena de dulces colombianos. Palo incluido.',65000,82000,'Piñata',4.5,null,true],
+   102→['Corona y Cetro Cumpleañero','Corona brillante y cetro','Corona con diamantes fantasía y cetro. Incluye capa.',32000,null,'Rey',4.4],
+   103→['Cupcakes Torre Cumpleaños','Torre de cupcakes decorados','12 cupcakes: red velvet, chocolate, vainilla. Display incluido.',72000,null,'Cupcakes',4.7,null,null,true],
+   104→['Banner Foto Cumpleaños','Banner con fotos del cumpleañero','Banner de tela con 10 fotos desde bebé hasta hoy.',55000,null,'Memorias',4.6],
+   105→['Regalo Cumpleañero Ejecutivo','Regalo elegante para profesional','Portafolio cuero, pluma fuente, café especial y tarjeta.',185000,null,'Ejecutivo',4.8,null,null,true],
+   106→['Combo Cumple Niños Divertido','Combo completo fiesta infantil','Globos, piñata, decoración, cupcakes, corona y regalito.',120000,null,'Niños',4.7,null,null,true],
+   107→['Tarjeta Regalo Experiencia','Tarjeta regalo para elegir experiencia','Elegir: spa, cena, aventura o taller. Válida 6 meses.',150000,null,'Experiencia',4.9,null,null,true],
+   108→['Bono Spa Cumpleaños','Bono para día de spa y relajación','Masaje, facial, hidratación y zonas húmedas.',195000,null,'Spa',5.0,true,null,true],
+   109→['Caja Whisky Premium Cumple','Whisky con copas y caja','Whisky premium en caja de madera con 2 copas de cristal.',250000,null,'Whisky',4.9],
+   110→['Torta Número Gigante','Torta forma de número decorada','Torta en forma del número. Buttercream y flores comestibles.',135000,null,'Número',4.8],
+   111→['Cumpleaños Sorpresa Oficina','Sorpresa para celebrar en la oficina','Mini torta, globo, tarjeta grupal y decoración de escritorio.',68000,85000,'Oficina',4.5,null,true],
+   112→['Regalo Cumple 15 Elegante','Set especial para quinceañera','Corona brillante, pulsera cristales, ramo mini y tarjeta.',115000,null,'Quince',4.8,null,null,true],
+   113→['Cena Cumpleaños Dos','Cena romántica de cumpleaños para dos','Menú degustación, copa bienvenida y mini torta.',220000,null,'Cena',4.9,null,null,true],
+   114→['Cumple Sorpresa Mascota','Combo cumpleaños para mascotas','Croquetas gourmet, juguete, galletas caninas y bandana.',45000,58000,'Mascota',4.4,null,true],
+   115→['Video Mensajes Cumpleaños','Video con mensajes de seres queridos','Video editado con mensajes de familia. Música y fotos.',88000,null,'Emotivo',4.9,null,null,true]]},
+   116→
+   117→aniversarios:{c:[{n:'Rojo',h:'#ef4444'},{n:'Rosa',h:'#f9a8d4'},{n:'Dorado',h:'#d4a574'},{n:'Blanco',h:'#fef2f2'}],s:[{n:'Básico',d:0},{n:'Premium',d:35000},{n:'Deluxe',d:70000}],f:['Hecho con amor','Empaque romántico','Dedicatoria romántica','Entrega sorpresa'],b:[{n:'Agregar ramo de rosas',d:45000,desc:'Ramo de 12 rosas rojas'},{n:'Incluir cena para dos',d:85000,desc:'Cena en restaurante aliado'},{n:'Agregar botella champagne',d:55000,desc:'Champagne para brindar'}],p:[
+   118→['Aniversario Silver Luxe','Set premium con detalles plateados','Caja de plata con collar, rosas blancas, champagne y carta de amor.',195000,null,'Luxe',5.0,true,null,true],
+   119→['Caja Amor Eterno','Caja romántica con regalos para la pareja','Caja madera grabada "Amor Eterno": velas, chocolates, foto marco y carta.',125000,null,'Eterno',4.9,true,null,true],
+   120→['Cena Romántica Para Dos','Cena con velas en restaurante aliado','Menú degustación, copa bienvenida, velas y pétalos. Reserva incluida.',220000,null,'Cena',5.0,true,null,true],
+   121→['Combo Aniversario Rosa','Ramo de rosas, peluche y chocolates','12 rosas rojas, oso mediano y chocolates artesanales.',135000,null,'Clásico',4.8,null,null,true],
+   122→['Set Vino y Quesos','Botella de vino con tablero de quesos','Vino reserva con tablado de quesos, frutos secos y mermelada.',155000,null,'Vino',4.8,null,null,true],
+   123→['Experiencia En Pareja','Día de spa o aventura para dos','Bono: spa, clase cocina, paseo barco o sesión fotográfica.',180000,null,'Experiencia',4.9,null,null,true],
+   124→['Carta Mapa Estrellas','Mapa estrellas del día que se conocieron','Mapa astral con constelación exacta de fecha y lugar especial.',85000,null,'Estrellas',4.7,null,null,true],
+   125→['Serenata Vallenata','Serenata de 3 canciones con músicos','Serenata con músicos profesionales. 3 canciones elegidas.',175000,null,'Serenata',4.9],
+   126→['Álbum Recuerdos Premium','Álbum de cuero con fotos de la pareja','Álbum de cuero artesanal 30 páginas. Kit de pegado incluido.',95000,null,'Memorias',4.6],
+   127→['Anillo Compromiso Set','Anillo de compromiso con presentación','Anillo en caja terciopelo con presentación: pétalos, velas y música.',350000,null,'Compromiso',5.0,true,null,true],
+   128→['Finde Escapada Romántica','Escapada de fin de semana para dos','Alojamiento rural, cena, desayuno y actividad especial.',380000,null,'Escapada',5.0,null,null,true],
+   129→['Pulsera Nombres Enamorados','Pulseras con nombres de la pareja','Dos pulseras plata 925 con nombres grabados. Estuche incluido.',115000,null,'Pulsera',4.7],
+   130→['Caja Sentimientos Cartas','Caja con 365 cartas de amor','365 cartas "Un motivo por el que te amo" para cada día.',75000,null,'365 Días',4.8,null,null,true],
+   131→['Renovación Votos Set','Set para renovación de votos','Velas unitivas, lazos, certificado decorativo y pétalos.',98000,null,'Votos',4.7],
+   132→['Collar Corazones Dos','Collar con dos corazones entrelazados','Plata con dos corazones grabables. Estuche premium.',135000,null,'Collar',4.8,null,null,true],
+   133→['Noche Estrellada Terraza','Cena privada en terraza con velas','Cena privada con velas, pétalos, música y menú especial.',260000,null,'Terraza',5.0,null,null,true],
+   134→['Set Aromaterapia Pareja','Kit aromaterapia para parejas','Velas, aceites, sales de baño y difusor.',68000,85000,'Relax',4.5,null,true],
+   135→['Foto Libro Nuestra Historia','Libro de fotos con la historia de pareja','40 páginas de fotos y textos. Diseño gráfico incluido.',110000,null,'Historia',4.8,null,null,true],
+   136→['Baile Sorpresa Aniversario','Clase de baile privada para dos','Clase de salsa, bachata o tango con instructor. Vino incluido.',95000,null,'Baile',4.7,null,null,true],
+   137→['Caja Te Recuerdo','Caja con recuerdos personalizados','Caja con recuerdos: entradas, tickets, foto favorita y carta.',85000,null,'Recuerdo',4.6]]},
+   138→
+   139→personalizados:{c:[{n:'Natural',h:'#d4a574'},{n:'Rosa',h:'#f9a8d4'},{n:'Negro',h:'#374151'},{n:'Blanco',h:'#fef2f2'}],s:[{n:'Único',d:0}],f:['100% personalizado','Diseño exclusivo','Producción artesanal','Entrega especial'],b:[{n:'Agregar marco de fotos',d:15000,desc:'Marco de madera premium'},{n:'Incluir dedicatoria láser',d:8000,desc:'Grabado láser personalizado'},{n:'Agregar estuche regalo',d:12000,desc:'Estuche de presentación'}],p:[
+   140→['Taza Personalizada Foto','Taza con foto y mensaje personalizado','Taza cerámica premium con impresión de alta calidad. Microondas y lavavajillas.',42000,null,'Personal',4.7,true,null,true],
+   141→['Almohada Foto Corazón','Almohada corazón con foto','Almohada de terciopelo con foto en alta resolución. Relleno premium.',55000,null,'Corazón',4.8,null,null,true],
+   142→['Lámpara Nombre Brillante','Lámpara LED con nombre grabado','Lámpara LED de madera con nombre grabado láser. Luz regulable.',68000,null,'Brillante',4.8,null,null,true],
+   143→['Carta Mapa Estrellas','Mapa estelar personalizado','Mapa astral de fecha y lugar especial. Impresión fine art en marco.',85000,null,'Estelar',4.9,true,null,true],
+   144→['Cojín Frase Personalizada','Cojín con frase personalizada','Terciopelo con frase bordada en hilo dorado. Relleno suave.',38000,null,'Frase',4.6],
+   145→['Cuadro Foto Lienzo','Lienzo con foto en alta resolución','Lienzo 40x60cm con foto en resolución gallery. Bastidor de madera.',72000,null,'Lienzo',4.7,null,null,true],
+   146→['Caja Música Personalizada','Caja de música con melodía elegida','Caja de madera con mecanismo musical. Grabado láser personalizado.',65000,null,'Música',4.8,null,null,true],
+   147→['Reloj Foto Pareja','Reloj de pared con foto de la pareja','Reloj con mecanismo silencioso y foto. Madera natural.',58000,72000,'Reloj',4.5,null,true],
+   148→['Bolso Nombre Bordado','Bolso de tela con nombre bordado','Bolso premium con nombre bordado a mano. Diseño minimalista.',45000,null,'Bolso',4.6],
+   149→['Agenda Personalizada Cuero','Agenda de cuero con iniciales grabadas','Cuero genuino con iniciales láser. Papel premium y separadores.',62000,null,'Agenda',4.7,null,null,true],
+   150→['Rompecabezas Foto','Rompecabezas con foto personalizada','500 piezas con tu foto. Impresión de alta calidad.',35000,null,'Puzzle',4.5],
+   151→['Llavero Foto Doble','Llavero con fotos de la pareja','Dos llaveros de acero inoxidable con fotos resistentes al agua.',28000,null,'Llavero',4.4,null,null,true],
+   152→['Botella Vino Etiqueta Personal','Vino con etiqueta personalizada','Vino reserva con etiqueta diseñada. Caja de madera incluida.',98000,null,'Vino',4.8,true,null,true],
+   153→['Camiseta Diseño Exclusivo','Camiseta con diseño personalizado','Algodón pima con impresión DTG. Diseño exclusivo.',42000,52000,'Camiseta',4.5,null,true],
+   154→['Caja Te Recuerdo','Caja con recuerdos personalizados','Caja artesanal con compartimentos para fotos, tickets, cartas.',75000,null,'Recuerdo',4.7,null,null,true],
+   155→['Póster Collage Fotos','Póster con collage de fotos','Póster A3 con hasta 20 fotos. Impresión fine art papel mate.',48000,null,'Collage',4.6],
+   156→['Billetera Cuero Grabada','Billetera de cuero con grabado','Cuero genuino con nombre grabado láser. Múltiples compartimentos.',85000,null,'Billetera',4.8,null,null,true],
+   157→['Body Bebé Personalizado','Body de bebé con diseño personalizado','Algodón orgánico con impresión segura. Diseño con nombre.',25000,null,'Bebé',4.5],
+   158→['Manta Foto Grande','Manta polar con foto impresa','Manta 150x200cm con foto en alta resolución.',78000,null,'Manta',4.7,null,null,true],
+   159→['Set Copa Grabada Pareja','Dos copas con grabado personalizado','Cristal con grabado láser de nombres y fecha. Estuche incluido.',65000,null,'Copas',4.6]]},
+   160→
+   161→sorpresas:{c:[{n:'Rojo',h:'#ef4444'},{n:'Rosa',h:'#f9a8d4'},{n:'Dorado',h:'#d4a574'},{n:'Negro',h:'#374151'}],s:[{n:'Pequeño',d:0},{n:'Mediano',d:25000},{n:'Grande',d:50000}],f:['100% sorpresa','Momento inolvidable','Coordinación completa','Foto del momento incluida'],b:[{n:'Agregar video del momento',d:15000,desc:'Video profesional de la sorpresa'},{n:'Incluir ramo de flores',d:35000,desc:'Ramo para la ocasión'},{n:'Agregar champagne',d:45000,desc:'Para brindar después'}],p:[
+   162→['Mega Sorpresa Ultimate','Sorpresa completa con todo incluido','Serenata, globos, flores, torta, champagne y coordinación completa.',250000,null,'Ultimate',5.0,true,null,true],
+   163→['Sorpresa Parranda','Parranda con músicos y refrigerio','Parranda vallenata con 4 músicos y refrigerio para 10 personas.',175000,null,'Parranda',4.9,true,null,true],
+   164→['Sorpresa Box Misteriosa','Caja misteriosa con regalos sorpresa','Caja de 3 niveles con regalos sorpresa en cada compartimento.',95000,null,'Misterio',4.8,null,null,true],
+   165→['Sorpresa Medianoche','Llegada sorpresa a media noche','Flores, velas, música y regalo a media noche.',145000,null,'Medianoche',5.0,true,null,true],
+   166→['Sorpresa Flash Mob','Flash mob con bailarines profesionales','10 bailarines con coreografía sorpresa. Música y coordinación.',280000,null,'Flash Mob',5.0,true,null,true],
+   167→['Sorpresa Globos Cielo','Suelta de 100 globos con mensajes','100 globos de papel con mensajes al atardecer.',85000,null,'Cielo',4.7,null,null,true],
+   168→['Sorpresa Mensaje Arena','Mensaje escrito en arena','Mensaje gigante en arena de finca cerca a Bogotá. Foto profesional.',65000,null,'Arena',4.6],
+   169→['Sorpresa Viaje Sorpresa','Viaje sorpresa a destino cercano','Fin de semana sorpresa. Destino revelado el día del viaje.',320000,null,'Viaje',5.0,null,null,true],
+   170→['Sorpresa Decoración Hogar','Decoración sorpresa del hogar','Globos, pétalos, velas, banner y regalo. Llegan a un escenario mágico.',125000,null,'Hogar',4.9,null,null,true],
+   171→['Sorpresa Comida Favorita','Comida favorita preparada y servida','Chef profesional prepara su comida favorita en casa.',155000,null,'Chef',4.8,null,null,true],
+   172→['Sorpresa Foto Gigante','Foto gigante desplegada en lugar especial','Foto de 3x2 metros. Sesión foto profesional del momento.',98000,null,'Foto',4.7],
+   173→['Sorpresa Grabación Familiar','Video con mensajes de toda la familia','Video editado con mensajes de familia. Música y fotos.',88000,null,'Familiar',4.9,null,null,true],
+   174→['Sorpresa Clase Privada','Clase privada sorpresa de algo especial','Clase: cocina, pintura, baile, mixología o cerámica.',95000,null,'Clase',4.7,null,null,true],
+   175→['Sorpresa Scavenger Hunt','Búsqueda del tesoro por la ciudad','Pistas personalizadas por Bogotá. Premio final sorpresa.',115000,null,'Aventura',4.8,null,null,true],
+   176→['Sorpresa Picnic Romántico','Picnic romántico en parque','Manta, cesta gourmet, velas, música y decoración.',88000,null,'Picnic',4.8,null,null,true],
+   177→['Sorpresa Room Service','Room service sorpresa en hotel','Room service sorpresa: desayuno, cena o tarde de spa.',165000,null,'Hotel',4.9,null,null,true],
+   178→['Sorpresa Concierto Privado','Concierto privado con cantante','Cantante profesional en concierto privado. Repertorio elegido.',220000,null,'Concierto',5.0,true,null,true],
+   179→['Sorpresa Cine Privado','Sesión de cine privada con snacks','Pantalla grande, proyección, snacks gourmet y decoración temática.',95000,null,'Cine',4.7,null,null,true],
+   180→['Sorpresa Maquillaje Glam','Sesión de maquillaje y styling profesional','Maquillaje profesional, styling y sesión de fotos. Para sentirse divina.',85000,null,'Glam',4.6],
+   181→['Sorpresa Amanecer Montaña','Amanecer en la montaña con desayuno','Trekking guiado al amanecer con desayuno en la cima. Experiencia épica.',125000,null,'Amanecer',4.9,null,null,true]]}
+   182→};
+   183→
+   184→async function seed() {
+   185→  console.log('Seeding database...');
+   186→  await db.product.deleteMany();
+   187→
+   188→  const catKeys = Object.keys(C);
+   189→  let count = 0;
+   190→
+   191→  for (const catKey of catKeys) {
+   192→    const cfg = C[catKey];
+   193→    for (let i = 0; i < cfg.p.length; i++) {
+   194→      const p = cfg.p[i];
+   195→      const name = p[0]; const desc = p[1]; const detail = p[2]; const price = p[3];
+   196→      const origPrice = p[4] ?? null;
+   197→      const badge = (p[5] != null && typeof p[5] === 'string') ? p[5] : null;
+   198→      const rating = (p[6] != null && typeof p[6] === 'number') ? p[6] : 4.5;
+   199→      const best = p[7] === true;
+   200→      const offer = p[8] === true;
+   201→      const recom = p[9] === true;
+   202→      const imgPath = `/products/${catKey}_${slug(name)}.png`;
+   203→      const colors = cfg.c.map(c => ({name:c.n, hex:c.h}));
+   204→      const sizes = cfg.s.map(s => ({name:s.n, priceDiff:s.d}));
+   205→      const features = cfg.f.map(f => ({icon:'star', text:f}));
+   206→      const combos = cfg.b;
+   207→
+   208→      // Pick 2-3 colors per product based on index
+   209→      const productColors = colors.length > 3 
+   210→        ? [colors[i % colors.length], colors[(i+1) % colors.length], colors[(i+2) % colors.length]] 
+   211→        : colors;
+   212→
+   213→      await db.product.create({
+   214→        data: {
+   215→          name,
+   216→          description: desc,
+   217→          detailDescription: detail,
+   218→          price,
+   219→          category: catKey,
+   220→          badge,
+   221→          rating,
+   222→          image: imgPath,
+   223→          images: JSON.stringify([imgPath]),
+   224→          colors: JSON.stringify(productColors),
+   225→          sizes: JSON.stringify(sizes),
+   226→          features: JSON.stringify(features),
+   227→          combinations: JSON.stringify(combos),
+   228→          isBestSeller: best,
+   229→          isOffer: offer,
+   230→          isRecommended: recom,
+   231→          isDigitalExperience: catKey === 'cumpleanos' && name === 'Video Mensajes Cumpleaños',
+   232→          originalPrice: origPrice || null,
+   233→        },
+   234→      });
+   235→      count++;
+   236→    }
+   237→  }
+   238→
+   239→  console.log(`Seeded ${count} products!`);
+   240→}
+   241→
+   242→seed().catch(console.error);
+   243→
+   244→function slug(name: string): string {
+   245→  return name.toLowerCase()
+   246→    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+   247→    .replace(/[^a-z0-9]+/g, '-')
+   248→    .replace(/(^-|-$)/g, '');
+   249→}
+   250→
