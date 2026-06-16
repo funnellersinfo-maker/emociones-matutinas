@@ -10,26 +10,12 @@ import { DigitalExperiences } from '@/components/shop/SpecialSections';
 import { CartBar } from '@/components/shop/CartBar';
 import { CartDrawer } from '@/components/shop/CartDrawer';
 import { CheckoutFlow } from '@/components/shop/CheckoutFlow';
+import { ProductDetail } from '@/components/shop/ProductDetail';
 import { Footer } from '@/components/shop/Footer';
 import { FloatingElements } from '@/components/shop/FloatingElements';
 import { FloatingActions } from '@/components/shop/FloatingActions';
 import { useCartStore } from '@/store/cart-store';
-
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  badge: string | null;
-  rating: number;
-  image: string;
-  isBestSeller: boolean;
-  isOffer: boolean;
-  isRecommended: boolean;
-  isDigitalExperience: boolean;
-  originalPrice: number | null;
-}
+import { Product } from '@/components/shop/ProductCard';
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -38,6 +24,8 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [cartOpen, setCartOpen] = useState(false);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [detailOpen, setDetailOpen] = useState(false);
   const cartItems = useCartStore((s) => s.items);
 
   const fetchProducts = useCallback(async () => {
@@ -109,6 +97,16 @@ export default function Home() {
     setCartOpen(true);
   };
 
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product);
+    setDetailOpen(true);
+  };
+
+  const handleDetailClose = () => {
+    setDetailOpen(false);
+    setSelectedProduct(null);
+  };
+
   const showSpecialSections = selectedCategory === 'todos' && !searchQuery;
 
   return (
@@ -139,6 +137,7 @@ export default function Home() {
                 subtitle="Los favoritos de nuestros clientes esta semana"
                 products={bestSellers}
                 gradient="bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border border-yellow-100/50"
+                onProductClick={handleProductClick}
               />
 
               <SpecialSection
@@ -147,6 +146,7 @@ export default function Home() {
                 subtitle="¡Aprovecha estas ofertas antes de que se acaben!"
                 products={offers}
                 gradient="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 border border-red-100/50"
+                onProductClick={handleProductClick}
               />
 
               <SpecialSection
@@ -155,9 +155,10 @@ export default function Home() {
                 subtitle="Selección especial para conquistar corazones"
                 products={recommended}
                 gradient="bg-gradient-to-br from-pink-50 via-rose-50 to-fuchsia-50 border border-pink-100/50"
+                onProductClick={handleProductClick}
               />
 
-              <DigitalExperiences products={digitalProducts} />
+              <DigitalExperiences products={digitalProducts} onProductClick={handleProductClick} />
             </>
           )}
 
@@ -173,6 +174,7 @@ export default function Home() {
                 : undefined
             }
             showCount={true}
+            onProductClick={handleProductClick}
           />
 
           {/* Loading state */}
@@ -204,6 +206,13 @@ export default function Home() {
         isOpen={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
         onBack={handleBackToCart}
+      />
+
+      {/* Product Detail Modal */}
+      <ProductDetail
+        product={selectedProduct}
+        isOpen={detailOpen}
+        onClose={handleDetailClose}
       />
 
       {/* Bottom padding for cart bar */}

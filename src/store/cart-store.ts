@@ -8,6 +8,9 @@ export interface CartItem {
   image: string;
   quantity: number;
   category: string;
+  selectedColor?: string;
+  selectedSize?: string;
+  selectedCombos?: string[];
 }
 
 interface CartState {
@@ -26,11 +29,18 @@ export const useCartStore = create<CartState>()(
       items: [],
       addItem: (item) => {
         const items = get().items;
-        const existing = items.find((i) => i.id === item.id);
+        // Create a unique key that includes color and size for same product with different options
+        const itemKey = `${item.id}-${item.selectedColor || ''}-${item.selectedSize || ''}`;
+        const existing = items.find((i) => {
+          const existingKey = `${i.id}-${i.selectedColor || ''}-${i.selectedSize || ''}`;
+          return existingKey === itemKey;
+        });
         if (existing) {
           set({
             items: items.map((i) =>
-              i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+              `${i.id}-${i.selectedColor || ''}-${i.selectedSize || ''}` === itemKey
+                ? { ...i, quantity: i.quantity + 1 }
+                : i
             ),
           });
         } else {

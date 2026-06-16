@@ -1,23 +1,7 @@
 'use client';
 
 import { Music, QrCode, Video, Mail, Sparkles } from 'lucide-react';
-import { ProductCard } from './ProductCard';
-
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  badge: string | null;
-  rating: number;
-  image: string;
-  isBestSeller: boolean;
-  isOffer: boolean;
-  isRecommended: boolean;
-  isDigitalExperience: boolean;
-  originalPrice: number | null;
-}
+import { ProductCard, Product } from './ProductCard';
 
 interface SpecialSectionProps {
   id: string;
@@ -25,9 +9,10 @@ interface SpecialSectionProps {
   subtitle: string;
   products: Product[];
   gradient: string;
+  onProductClick?: (product: Product) => void;
 }
 
-export function SpecialSection({ id, title, subtitle, products, gradient }: SpecialSectionProps) {
+export function SpecialSection({ id, title, subtitle, products, gradient, onProductClick }: SpecialSectionProps) {
   if (products.length === 0) return null;
 
   return (
@@ -48,7 +33,7 @@ export function SpecialSection({ id, title, subtitle, products, gradient }: Spec
         <div className="flex gap-3 sm:gap-4 overflow-x-auto hide-scrollbar pb-2">
           {products.map((product) => (
             <div key={product.id} className="flex-shrink-0 w-[180px] sm:w-[200px]">
-              <ProductCard product={product} />
+              <ProductCard product={product} onProductClick={onProductClick || (() => {})} />
             </div>
           ))}
         </div>
@@ -59,6 +44,7 @@ export function SpecialSection({ id, title, subtitle, products, gradient }: Spec
 
 interface DigitalExperiencesProps {
   products: Product[];
+  onProductClick?: (product: Product) => void;
 }
 
 const digitalItems = [
@@ -68,7 +54,7 @@ const digitalItems = [
   { icon: Mail, name: 'Carta Interactiva', desc: 'Carta digital con animaciones y música personalizada', color: 'from-amber-500 to-orange-500' },
 ];
 
-export function DigitalExperiences({ products }: DigitalExperiencesProps) {
+export function DigitalExperiences({ products, onProductClick }: DigitalExperiencesProps) {
   return (
     <section id="digitales" className="py-6 sm:py-8">
       <div className="rounded-3xl bg-gradient-to-br from-violet-50 via-purple-50 to-pink-50 p-4 sm:p-6 border border-violet-100/50">
@@ -103,7 +89,7 @@ export function DigitalExperiences({ products }: DigitalExperiencesProps) {
           <div className="flex gap-3 sm:gap-4 overflow-x-auto hide-scrollbar pb-2">
             {products.map((product) => (
               <div key={product.id} className="flex-shrink-0 w-[180px] sm:w-[200px]">
-                <ProductCard product={product} />
+                <ProductCard product={product} onProductClick={onProductClick || (() => {})} />
               </div>
             ))}
           </div>

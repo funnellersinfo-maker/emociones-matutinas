@@ -1,0 +1,258 @@
+     1→     1→import { db } from '../src/lib/db';
+     2→     2→
+     3→     3→const categoryImageMap: Record<string, string[]> = {
+     4→     4→  peluches: ['/products/peluche_1.png', '/products/peluche_2.png', '/products/peluche_3.png'],
+     5→     5→  flores: ['/products/flor_1.png', '/products/flor_2.png', '/products/flor_3.png'],
+     6→     6→  desayunos: ['/products/desayuno_1.png', '/products/desayuno_2.png', '/products/desayuno_3.png'],
+     7→     7→  globos: ['/products/globo_1.png', '/products/globo_2.png', '/products/globo_3.png'],
+     8→     8→  cumpleanos: ['/products/cumple_1.png', '/products/cumple_2.png', '/products/cumple_3.png'],
+     9→     9→  aniversarios: ['/products/aniversario_1.png', '/products/aniversario_2.png', '/products/aniversario_3.png'],
+    10→    10→  personalizados: ['/products/personalizado_1.png', '/products/personalizado_2.png', '/products/personalizado_3.png'],
+    11→    11→  sorpresas: ['/products/sorpresa_1.png', '/products/sorpresa_2.png', '/products/sorpresa_3.png'],
+    12→    12→};
+    13→    13→
+    14→    14→function getImage(category: string, index: number): string {
+    15→    15→  const images = categoryImageMap[category] || categoryImageMap.peluches;
+    16→    16→  return images[index % images.length];
+    17→    17→}
+    18→    18→
+    19→    19→interface ProductData {
+    20→    20→  name: string;
+    21→    21→  description: string;
+    22→    22→  price: number;
+    23→    23→  category: string;
+    24→    24→  badge: string;
+    25→    25→  rating: number;
+    26→    26→  isBestSeller: boolean;
+    27→    27→  isOffer: boolean;
+    28→    28→  isRecommended: boolean;
+    29→    29→  isDigitalExperience: boolean;
+    30→    30→  originalPrice?: number;
+    31→    31→}
+    32→    32→
+    33→    33→const rawProducts: ProductData[] = [
+    34→    34→  // PELUCHES (20)
+    35→    35→  { name: 'Oso Gigante Premium', description: 'Oso de peluche de 80cm, ultra suave y abrazable', price: 89000, category: 'peluches', badge: 'Popular', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    36→    36→  { name: 'Conejito Rosa Deluxe', description: 'Conejo de peluche premium color rosa con lazo dorado', price: 65000, category: 'peluches', badge: 'Nuevo', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    37→    37→  { name: 'Unicornio Mágico', description: 'Peluche unicornio con crin brillante y cuerno dorado', price: 72000, category: 'peluches', badge: 'Mágico', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    38→    38→  { name: 'Osito Mini Colección', description: 'Set de 3 ositos mini perfectos para decorar', price: 35000, category: 'peluches', badge: 'Set', rating: 4.7, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 45000 },
+    39→    39→  { name: 'Panda Abrazo Grande', description: 'Panda de peluche de 60cm con detalles bordados', price: 78000, category: 'peluches', badge: '', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    40→    40→  { name: 'Gatito Bebé Suave', description: 'Peluche gatito con textura sedosa de 30cm', price: 42000, category: 'peluches', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    41→    41→  { name: 'Perrito Golden Peluche', description: 'Perro golden retriever de peluche de 50cm', price: 58000, category: 'peluches', badge: 'Favorito', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    42→    42→  { name: 'Flamingo Rosa Gigante', description: 'Flamingo de peluche de 90cm, decorativo y divertido', price: 95000, category: 'peluches', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    43→    43→  { name: 'Conejito Pascua Premium', description: 'Conejo con cesta de huevos decorativos incluidos', price: 55000, category: 'peluches', badge: '', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 68000 },
+    44→    44→  { name: 'Dinosaurio Tierno', description: 'Dinosaurio de peluche verde con gorrito', price: 48000, category: 'peluches', badge: 'Divertido', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    45→    45→  { name: 'Oso Polar Suave', description: 'Oso polar de peluche blanco de 45cm', price: 62000, category: 'peluches', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    46→    46→  { name: 'Mapache Abrazable', description: 'Mapache de peluche con cola rayada de 40cm', price: 45000, category: 'peluches', badge: '', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    47→    47→  { name: 'Jirafa Amiga Alta', description: 'Jirafa de peluche de 70cm con manchas bordadas', price: 68000, category: 'peluches', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    48→    48→  { name: 'Koala Eucalipto', description: 'Koala de peluche gris con ramita de eucalipto', price: 52000, category: 'peluches', badge: 'Tierno', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    49→    49→  { name: 'Elefante Bebé Gris', description: 'Elefante de peluche mini de 25cm con orejas grandes', price: 38000, category: 'peluches', badge: '', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 48000 },
+    50→    50→  { name: 'Tigre Rayas Suave', description: 'Tigre de peluche naranja con rayas negras de 50cm', price: 55000, category: 'peluches', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    51→    51→  { name: 'Pingüino Emperador', description: 'Pingüino de peluche con bufanda roja incluida', price: 49000, category: 'peluches', badge: 'Único', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    52→    52→  { name: 'Caballito de Mar', description: 'Caballito de mar de peluche en tonos pastel de 35cm', price: 41000, category: 'peluches', badge: '', rating: 4.3, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    53→    53→  { name: 'Zorro Ártico Blanco', description: 'Zorro de peluche blanco con cola esponjosa de 45cm', price: 56000, category: 'peluches', badge: '', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    54→    54→  { name: 'Cordero Dreamy', description: 'Cordero de peluche nube súper suave de 40cm', price: 47000, category: 'peluches', badge: 'Suave', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    55→    55→
+    56→    56→  // FLORES (20)
+    57→    57→  { name: 'Bouquet Premium Rosas Rojas', description: '25 rosas rojas colombianas con follaje verde premium', price: 145000, category: 'flores', badge: 'Premium', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    58→    58→  { name: 'Ramo Girasoles Felices', description: '12 girasoles frescos con flores silvestres', price: 95000, category: 'flores', badge: 'Alegre', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    59→    59→  { name: 'Caja Floral Elegance', description: 'Caja de madera con arreglo de rosas y lirios', price: 165000, category: 'flores', badge: 'Exclusivo', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    60→    60→  { name: 'Tulipanes Holandeses', description: '15 tulipanes importados en tonos vibrantes', price: 125000, category: 'flores', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    61→    61→  { name: 'Ramo Peonías Rosadas', description: '8 peonías rosadas con eucalipto decorativo', price: 155000, category: 'flores', badge: 'Romántico', rating: 5.0, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    62→    62→  { name: 'Arreglo Tropical Paraíso', description: 'Birds of paradise, heliconias y follaje tropical', price: 110000, category: 'flores', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    63→    63→  { name: 'Canasta Primaveral', description: 'Canasta rústica con flores de temporada variadas', price: 85000, category: 'flores', badge: '', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 105000 },
+    64→    64→  { name: 'Rosas Blancas Pureza', description: '20 rosas blancas con baby breath y verde', price: 130000, category: 'flores', badge: 'Elegante', rating: 4.9, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    65→    65→  { name: 'Bouquet Lavanda Relax', description: 'Ramo de lavanda fresca con aroma relajante', price: 75000, category: 'flores', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    66→    66→  { name: 'Coração de Rosas', description: 'Arreglo en forma de corazón con 30 rosas rojas', price: 195000, category: 'flores', badge: 'Especial', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    67→    67→  { name: 'Orquídeas Phalaenopsis', description: 'Planta de orquídea blanca en maceta cerámica', price: 135000, category: 'flores', badge: 'Sofisticado', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    68→    68→  { name: 'Ramo Margaritas Campo', description: 'Ramo de margaritas blancas y amarillas', price: 55000, category: 'flores', badge: '', rating: 4.4, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 70000 },
+    69→    69→  { name: 'Florero Cristal Rosas', description: 'Florero de cristal con 15 rosas mixtas', price: 120000, category: 'flores', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    70→    70→  { name: 'Bouquet Claveles Colombianos', description: '25 claveles colombianos en colores vivos', price: 80000, category: 'flores', badge: 'Nacional', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    71→    71→  { name: 'Arreglo Fiesta Floral', description: 'Arreglo festivo con globos y flores combinadas', price: 115000, category: 'flores', badge: 'Festivo', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    72→    72→  { name: 'Ramo Lisianthus Elegante', description: '12 lisianthus con follaje premium', price: 98000, category: 'flores', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    73→    73→  { name: 'Bouquet Rosas Rosadas', description: '20 rosas rosadas con verde ornamental', price: 125000, category: 'flores', badge: '', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    74→    74→  { name: 'Arreglo Mesa Centro', description: 'Arreglo floral elegante para mesa de centro', price: 140000, category: 'flores', badge: '', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    75→    75→  { name: 'Ramo Anturios Rojos', description: '10 anturios rojos con follaje tropical', price: 105000, category: 'flores', badge: '', rating: 4.7, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 130000 },
+    76→    76→  { name: 'Jardín Mini Creativo', description: 'Mini jardín en frasco de cristal con suculentas', price: 65000, category: 'flores', badge: 'Creativo', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    77→    77→
+    78→    78→  // DESAYUNOS (20)
+    79→    79→  { name: 'Desayuno Princesa Deluxe', description: 'Bandeja completa con frutas, jugo, pan artesanal y flores', price: 125000, category: 'desayunos', badge: 'Premium', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    80→    80→  { name: 'Desayuno Sorpresa Romántico', description: 'Bandeja con corazón de frutas, chocolate caliente y rosas', price: 98000, category: 'desayunos', badge: 'Romántico', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    81→    81→  { name: 'Desayuno Ejecutivo Premium', description: 'Café premium, croissants, frutas y mermeladas artesanales', price: 85000, category: 'desayunos', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    82→    82→  { name: 'Desayuno Cumpleaños Feliz', description: 'Pancakes decorados, jugo natural y velitas incluidas', price: 92000, category: 'desayunos', badge: 'Cumpleaños', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    83→    83→  { name: 'Brunch Dominical Especial', description: 'Huevos benedictinos, waffles, frutas y mimosa', price: 110000, category: 'desayunos', badge: 'Brunch', rating: 4.9, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    84→    84→  { name: 'Desayuno Saludable Fresh', description: 'Bowl de açaí, smoothie verde, granola y frutas', price: 72000, category: 'desayunos', badge: 'Healthy', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    85→    85→  { name: 'Desayuno Infantil Divertido', description: 'Cereales decorados, jugo, frutas y sorpresa incluida', price: 58000, category: 'desayunos', badge: 'Kids', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 72000 },
+    86→    86→  { name: 'Desayuno Colombiano Tradicional', description: 'Tamal, chocolate, queso, pan y jugo de mora', price: 68000, category: 'desayunos', badge: 'Típico', rating: 4.7, isBestSeller: true, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    87→    87→  { name: 'Desayuno Dulce Tentación', description: 'Croissants de chocolate, frutas y café especial', price: 78000, category: 'desayunos', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    88→    88→  { name: 'Desayuno Mamá Especial', description: 'Bandeja elegante con flores, café gourmet y dulces', price: 135000, category: 'desayunos', badge: 'Mamá', rating: 5.0, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    89→    89→  { name: 'Desayuno Pareja Amor', description: 'Bandeja para dos con champán, frutas y repostería', price: 155000, category: 'desayunos', badge: 'Pareja', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    90→    90→  { name: 'Desayuno Café Gourmet', description: 'Selección de cafés especiales con pastas artesanales', price: 82000, category: 'desayunos', badge: 'Café', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    91→    91→  { name: 'Desayuno Frutas Tropical', description: 'Surtido de frutas tropicales con yogur y granola', price: 65000, category: 'desayunos', badge: '', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 80000 },
+    92→    92→  { name: 'Desayuno Panadería Artesanal', description: 'Surtido de panes artesanales con mermeladas caseras', price: 70000, category: 'desayunos', badge: 'Artesanal', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    93→    93→  { name: 'Desayuno Aniversario Gold', description: 'Bandeja dorada con champán, fresas y repostería fina', price: 185000, category: 'desayunos', badge: 'Gold', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    94→    94→  { name: 'Desayuno Vegano Green', description: 'Opciones 100% veganas con smoothie bowl y tostadas', price: 75000, category: 'desayunos', badge: 'Vegano', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    95→    95→  { name: 'Desayuno Oficina Energía', description: 'Café, sándwiches, frutas para compartir en oficina', price: 95000, category: 'desayunos', badge: 'Oficina', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    96→    96→  { name: 'Desayuno Mimosa Brunch', description: 'Jugo de naranja, waffles, tocino y huevos rancheros', price: 88000, category: 'desayunos', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    97→    97→  { name: 'Desayuno Navidad Mágico', description: 'Bandeja temática con chocolate caliente y galletas', price: 105000, category: 'desayunos', badge: 'Navidad', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+    98→    98→  { name: 'Desayuno Personalizado Crea', description: 'Elige tus productos favoritos para tu bandeja ideal', price: 80000, category: 'desayunos', badge: 'Personaliza', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+    99→    99→
+   100→   100→  // GLOBOS (20)
+   101→   101→  { name: 'Bouquet Globos Cumpleaños', description: '10 globos de cumpleaños con helio y lazos', price: 55000, category: 'globos', badge: 'Cumple', rating: 4.7, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   102→   102→  { name: 'Arco Globos Espectacular', description: 'Arco decorativo de 2m con globos de colores', price: 185000, category: 'globos', badge: 'Impacto', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   103→   103→  { name: 'Globo Número Gigante', description: 'Globo número de 90cm con colores a elegir', price: 35000, category: 'globos', badge: '', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   104→   104→  { name: 'Columna Globos Elegante', description: 'Columna decorativa de 1.5m para eventos', price: 120000, category: 'globos', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   105→   105→  { name: 'Globos Rosados Princesa', description: 'Set de 15 globos rosados con confeti interior', price: 65000, category: 'globos', badge: 'Princesa', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   106→   106→  { name: 'Bouquet Mini Globos', description: '6 mini globos con mensajes de amor', price: 28000, category: 'globos', badge: '', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 38000 },
+   107→   107→  { name: 'Globos Foil Corazón', description: '3 globos foil en forma de corazón rojo', price: 42000, category: 'globos', badge: 'Amor', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   108→   108→  { name: 'Globos Estrella Foil', description: '5 globos foil en forma de estrella dorada', price: 48000, category: 'globos', badge: 'Brillante', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   109→   109→  { name: 'Set Globos Baby Shower', description: 'Decoración completa para baby shower con 20 globos', price: 95000, category: 'globos', badge: 'Baby', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   110→   110→  { name: 'Globos Metálicos Premium', description: '8 globos metálicos surtidos con acabado espejo', price: 52000, category: 'globos', badge: 'Premium', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   111→   111→  { name: 'Globo Caja Sorpresa', description: 'Caja que al abrirla liberan 10 globos con helio', price: 78000, category: 'globos', badge: 'Sorpresa', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   112→   112→  { name: 'Globos Transparentes Confeti', description: '6 globos transparentes con confeti de colores', price: 45000, category: 'globos', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   113→   113→  { name: 'Bouquet Arcoíris', description: '12 globos en todos los colores del arcoíris', price: 58000, category: 'globos', badge: 'Color', rating: 4.7, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 72000 },
+   114→   114→  { name: 'Globos Letras Frase', description: 'Globos foil formando la frase que elijas', price: 85000, category: 'globos', badge: 'Personaliza', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   115→   115→  { name: 'Globos Negocios Corporate', description: 'Set de globos elegantes para eventos corporativos', price: 75000, category: 'globos', badge: 'Corporate', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   116→   116→  { name: 'Globo Gigante 90cm', description: 'Globo gigante de 90cm con mensaje personalizado', price: 45000, category: 'globos', badge: '', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   117→   117→  { name: 'Globos Unicornio Mágico', description: 'Set de 8 globos temática unicornio con colores pastel', price: 62000, category: 'globos', badge: 'Unicornio', rating: 4.9, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   118→   118→  { name: 'Globos Boda Elegante', description: 'Decoración de globos blanca y dorada para bodas', price: 150000, category: 'globos', badge: 'Boda', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   119→   119→  { name: 'Globos Animalitos', description: '6 globos foil en forma de animales tiernos', price: 50000, category: 'globos', badge: 'Tiernos', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   120→   120→  { name: 'Pack Decoración Completa', description: 'Arco + columna + bouquet para decoración total', price: 250000, category: 'globos', badge: 'Completo', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   121→   121→
+   122→   122→  // CUMPLEAÑOS (20)
+   123→   123→  { name: 'Sorpresa Feliz Cumpleaños Gold', description: 'Caja dorada con regalo, globos, flores y tarjeta', price: 165000, category: 'cumpleanos', badge: 'Gold', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   124→   124→  { name: 'Kit Fiesta Completo', description: 'Decoración, platos, vasos, servilletas y gorritos', price: 85000, category: 'cumpleanos', badge: 'Fiesta', rating: 4.7, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   125→   125→  { name: 'Caja Cumpleaños Sorpresa', description: 'Caja misteriosa con 5 regalos sorpresa temáticos', price: 120000, category: 'cumpleanos', badge: 'Sorpresa', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   126→   126→  { name: 'Pastel Decorado Premium', description: 'Pastel artesanal para 10 personas con decoración personalizada', price: 95000, category: 'cumpleanos', badge: 'Delicioso', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   127→   127→  { name: 'Corona Cumpleañera', description: 'Corona brillante con velas para la cumpleañera', price: 35000, category: 'cumpleanos', badge: 'Reina', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   128→   128→  { name: 'Torta Cupcakes Festiva', description: '12 cupcakes decorados con temática de cumpleaños', price: 78000, category: 'cumpleanos', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   129→   129→  { name: 'Piñata Divertida', description: 'Piñata temática llena de dulces y sorpresas', price: 45000, category: 'cumpleanos', badge: 'Fiesta', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 58000 },
+   130→   130→  { name: 'Gorra Feliz Cumpleaños', description: 'Gorra bordada con diseño de cumpleaños', price: 28000, category: 'cumpleanos', badge: '', rating: 4.3, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   131→   131→  { name: 'Set Velas Año Nuevo', description: 'Velas numéricas brillantes para la torta', price: 18000, category: 'cumpleanos', badge: '', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   132→   132→  { name: 'Bolsa Regalo Premium', description: 'Bolsa de regalo con moño, tarjeta y papel seda', price: 25000, category: 'cumpleanos', badge: '', rating: 4.2, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   133→   133→  { name: 'Combo Cumple Infantil', description: 'Pastel + globos + decoración + piñata para niños', price: 145000, category: 'cumpleanos', badge: 'Kids', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   134→   134→  { name: 'Banda Cumpleañero LED', description: 'Banda luminosa con mensaje de feliz cumpleaños', price: 22000, category: 'cumpleanos', badge: 'LED', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   135→   135→  { name: 'Caja Dulces Retro', description: 'Caja nostalgic con dulces colombianos clásicos', price: 55000, category: 'cumpleanos', badge: 'Dulces', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   136→   136→  { name: 'Decoración Sala Fiesta', description: 'Set completo de decoración para sala de fiesta', price: 110000, category: 'cumpleanos', badge: '', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   137→   137→  { name: 'Cumple Sorpresa Medianoche', description: 'Entrega sorpresa a medianoche con serenata', price: 175000, category: 'cumpleanos', badge: 'Medianoche', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   138→   138→  { name: 'Tarta Helada Tropical', description: 'Tarta helada de frutas tropicales para 8 personas', price: 88000, category: 'cumpleanos', badge: 'Helada', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   139→   139→  { name: 'Combo Amigas Brunch', description: 'Brunch para 4 con champán y decoración rosa', price: 195000, category: 'cumpleanos', badge: 'Brunch', rating: 4.9, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   140→   140→  { name: 'Caja Chocolates Artesanales', description: '16 chocolates artesanales en caja de lujo', price: 68000, category: 'cumpleanos', badge: 'Choco', rating: 4.8, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 85000 },
+   141→   141→  { name: 'Serenata Vallenata', description: 'Serenata con grupo musical + regalo + flores', price: 280000, category: 'cumpleanos', badge: 'Serenata', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   142→   142→  { name: 'Experiencia Spa Cumple', description: 'Kit spa con sales, velas y productos premium', price: 115000, category: 'cumpleanos', badge: 'Spa', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   143→   143→
+   144→   144→  // ANIVERSARIOS (20)
+   145→   145→  { name: 'Caja Amor Eterno', description: 'Caja de lujo con vino, chocolates y carta de amor', price: 155000, category: 'aniversarios', badge: 'Amor', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   146→   146→  { name: 'Cena Romántica Para Dos', description: 'Arreglo de mesa con velas, flores y chocolates', price: 125000, category: 'aniversarios', badge: 'Romántico', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   147→   147→  { name: 'Set Vino y Quesos', description: 'Vino premium con tabla de quesos y frutos secos', price: 98000, category: 'aniversarios', badge: 'Vino', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   148→   148→  { name: 'Romance en la Noche', description: 'Arreglo con velas aromáticas, pétalos y champán', price: 85000, category: 'aniversarios', badge: 'Noche', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   149→   149→  { name: 'Carta Amor Eterna', description: 'Carta caligrafiada a mano en pergamino con marco', price: 45000, category: 'aniversarios', badge: 'Carta', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   150→   150→  { name: 'Álbum Recuerdos Premium', description: 'Álbum de cuero para fotos con páginas decoradas', price: 68000, category: 'aniversarios', badge: 'Recuerdos', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   151→   151→  { name: 'Pétalos Decoración Cama', description: 'Pétalos de rosa para decoración con velas', price: 38000, category: 'aniversarios', badge: '', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   152→   152→  { name: 'Combo Aniversario Rosa', description: 'Rosas + chocolates + vino + tarjeta', price: 175000, category: 'aniversarios', badge: 'Completo', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   153→   153→  { name: 'Marco Foto Corazón', description: 'Marco dorado con diseño de corazón para foto de pareja', price: 52000, category: 'aniversarios', badge: '', rating: 4.4, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 65000 },
+   154→   154→  { name: 'Experiencia En Pareja', description: 'Vale para experiencia: spa, cena o aventura', price: 220000, category: 'aniversarios', badge: 'Experiencia', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   155→   155→  { name: 'Candle Light Dinner', description: 'Kit completo para cena a luz de velas en casa', price: 105000, category: 'aniversarios', badge: 'Candelabro', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   156→   156→  { name: 'Collar Doble Corazón', description: 'Collar con dijes de corazón para los dos', price: 75000, category: 'aniversarios', badge: 'Joya', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   157→   157→  { name: 'Box Pareja Netflix', description: 'Snacks, cobija, vino para noche de películas', price: 92000, category: 'aniversarios', badge: 'Movie', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   158→   158→  { name: 'Fragancias Para Dos', description: 'Set de perfumes miniatura para él y ella', price: 88000, category: 'aniversarios', badge: 'Fragancia', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   159→   159→  { name: 'Ritual Pareja Spa', description: 'Kit spa para dos con aceites y sales', price: 115000, category: 'aniversarios', badge: 'Spa Duo', rating: 4.8, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   160→   160→  { name: 'Juego Pareja Divertido', description: 'Juego de mesa romántico para parejas', price: 42000, category: 'aniversarios', badge: 'Juego', rating: 4.4, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 55000 },
+   161→   161→  { name: 'Carta Mapa Estrellas', description: 'Mapa de las estrellas del día que se conocieron', price: 65000, category: 'aniversarios', badge: 'Estrellas', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   162→   162→  { name: 'Chocolate Artesanal Corazón', description: 'Chocolate belga en forma de corazón grande', price: 48000, category: 'aniversarios', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   163→   163→  { name: 'Promesas Cápsula Tiempo', description: 'Cápsula del tiempo para escribir promesas de amor', price: 35000, category: 'aniversarios', badge: 'Cápsula', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   164→   164→  { name: 'Aniversario Silver Luxe', description: 'Experiencia de lujo con limo, cena y regalo', price: 450000, category: 'aniversarios', badge: 'Luxe', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   165→   165→
+   166→   166→  // PERSONALIZADOS (20)
+   167→   167→  { name: 'Taza Personalizada Foto', description: 'Taza cerámica con tu foto y mensaje personalizado', price: 35000, category: 'personalizados', badge: 'Personal', rating: 4.7, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   168→   168→  { name: 'Almohada Foto Corazón', description: 'Almohada con impresión de tu foto favorita', price: 48000, category: 'personalizados', badge: 'Único', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   169→   169→  { name: 'Carta Caligrafiada Arte', description: 'Carta escrita a mano por calígrafo profesional', price: 25000, category: 'personalizados', badge: 'Arte', rating: 4.9, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   170→   170→  { name: 'Caja Mágica Personalizada', description: 'Caja de madera grabada con nombre y mensaje', price: 55000, category: 'personalizados', badge: '', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   171→   171→  { name: 'Lámpara Nombre Brillante', description: 'Lámpara LED con nombre cortado en acrílico', price: 62000, category: 'personalizados', badge: 'Brillante', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   172→   172→  { name: 'Cojín Letras Iniciales', description: 'Cojín bordado con las iniciales de la pareja', price: 38000, category: 'personalizados', badge: '', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   173→   173→  { name: 'Funda Celular Personalizada', description: 'Funda con diseño único y foto personal', price: 32000, category: 'personalizados', badge: 'Tech', rating: 4.4, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 42000 },
+   174→   174→  { name: 'Cuadro Foto Canvas', description: 'Impresión en canvas de alta calidad en marco', price: 72000, category: 'personalizados', badge: 'Arte', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   175→   175→  { name: 'Agenda Personalizada', description: 'Agenda 2025 con nombre en portada de cuero', price: 42000, category: 'personalizados', badge: '', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   176→   176→  { name: 'Llavero Foto Mini', description: 'Llavero acrílico con foto en alta definición', price: 18000, category: 'personalizados', badge: 'Mini', rating: 4.3, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   177→   177→  { name: 'Caja Te Recuerdo', description: 'Caja con frascos de recuerdos personalizables', price: 65000, category: 'personalizados', badge: 'Recuerdos', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   178→   178→  { name: 'Camiseta Mensaje Único', description: 'Camiseta con tu diseño o frase personalizada', price: 45000, category: 'personalizados', badge: '', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   179→   179→  { name: 'Calendario Fotos 12 Meses', description: 'Calendario con 12 fotos y fechas especiales', price: 55000, category: 'personalizados', badge: 'Calendario', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   180→   180→  { name: 'Imán Refri Foto Set', description: 'Set de 6 imanes con fotos para nevera', price: 22000, category: 'personalizados', badge: '', rating: 4.2, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   181→   181→  { name: 'Rompecabezas Foto', description: 'Rompecabezas de 500 piezas con tu foto', price: 38000, category: 'personalizados', badge: 'Puzzle', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   182→   182→  { name: 'Botella Térmica Grabada', description: 'Botella térmica con nombre grabado en láser', price: 52000, category: 'personalizados', badge: 'Natural', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 65000 },
+   183→   183→  { name: 'Caja Madera Mensaje', description: 'Caja de pino con mensaje grabado artesanalmente', price: 42000, category: 'personalizados', badge: 'Natural', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   184→   184→  { name: 'Mousepad Foto', description: 'Mousepad premium con impresión de tu foto', price: 28000, category: 'personalizados', badge: '', rating: 4.3, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   185→   185→  { name: 'Bolígrafo Grabado Luxe', description: 'Bolígrafo de lujo con nombre grabado', price: 35000, category: 'personalizados', badge: 'Luxe', rating: 4.5, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   186→   186→  { name: 'Set Regalo Empresarial', description: 'Set con agenda, bolígrafo y taza personalizados', price: 88000, category: 'personalizados', badge: 'Corporate', rating: 4.7, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   187→   187→
+   188→   188→  // SORPRESAS (20)
+   189→   189→  { name: 'Sorpresa Box Misteriosa', description: 'Caja misteriosa con 5 regalos seleccionados', price: 95000, category: 'sorpresas', badge: 'Misterio', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   190→   190→  { name: 'Canción Personalizada', description: 'Canción original compuesta e interpretada para ti', price: 120000, category: 'sorpresas', badge: 'Musical', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: true },
+   191→   191→  { name: 'Experiencia QR Mágica', description: 'Página web personalizada accede con código QR', price: 45000, category: 'sorpresas', badge: 'Digital', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: true },
+   192→   192→  { name: 'Video Sorpresa Emocional', description: 'Video editado con fotos y mensajes de seres queridos', price: 85000, category: 'sorpresas', badge: 'Video', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: true },
+   193→   193→  { name: 'Carta Interactiva Digital', description: 'Carta digital con animaciones y música personalizada', price: 35000, category: 'sorpresas', badge: 'Digital', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: true },
+   194→   194→  { name: 'Scavenger Hunt Regalo', description: 'Búsqueda del tesoro con pistas que llevan al regalo', price: 75000, category: 'sorpresas', badge: 'Aventura', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   195→   195→  { name: 'Sorpresa Medianoche', description: 'Entrega sorpresa a las 12am con velas y música', price: 110000, category: 'sorpresas', badge: '12AM', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   196→   196→  { name: 'Flash Mob Sorpresa', description: 'Coreografía sorpresa con bailarines profesionales', price: 350000, category: 'sorpresas', badge: 'Flash Mob', rating: 5.0, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   197→   197→  { name: 'Caja Raspa Gana', description: 'Caja con tarjetas raspa para revelar premios', price: 48000, category: 'sorpresas', badge: 'Raspa', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 62000 },
+   198→   198→  { name: 'Sorpresa Detrás Puerta', description: 'Decoración y regalo detrás de la puerta al abrir', price: 68000, category: 'sorpresas', badge: 'Sorpresa', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   199→   199→  { name: 'Carta Botella Mensaje', description: 'Mensaje dentro de botella con diseño vintage', price: 32000, category: 'sorpresas', badge: 'Botella', rating: 4.4, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   200→   200→  { name: 'Globo Caja Explosión', description: 'Caja que explota en confeti y regalos al abrirla', price: 82000, category: 'sorpresas', badge: 'Explosión', rating: 4.8, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   201→   201→  { name: 'Sorpresa Espejo Mágico', description: 'Espejo que revela mensaje oculto al acercarse', price: 58000, category: 'sorpresas', badge: 'Mágico', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   202→   202→  { name: 'Carta Scratch Secreta', description: 'Carta con área scratch que revela tu mensaje', price: 22000, category: 'sorpresas', badge: '', rating: 4.3, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   203→   203→  { name: 'Roma Sorpresa Foto', description: 'Collage de fotos que forma un corazón gigante', price: 55000, category: 'sorpresas', badge: 'Fotos', rating: 4.7, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   204→   204→  { name: 'Sorpresa Parranda', description: 'Grupo de parranderos con música y alegría', price: 180000, category: 'sorpresas', badge: 'Parranda', rating: 4.9, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   205→   205→  { name: 'Caja Tiempo Cápsula', description: 'Cápsula del tiempo con mensajes para el futuro', price: 65000, category: 'sorpresas', badge: 'Tiempo', rating: 4.6, isBestSeller: false, isOffer: false, isRecommended: false, isDigitalExperience: false },
+   206→   206→  { name: 'Sorpresa Película Personal', description: 'Mini película protagonizada por la persona sorpresa', price: 150000, category: 'sorpresas', badge: 'Cine', rating: 4.9, isBestSeller: false, isOffer: false, isRecommended: true, isDigitalExperience: true },
+   207→   207→  { name: 'Regalo Invisible Box', description: 'Caja vacía que revela el regalo de forma mágica', price: 42000, category: 'sorpresas', badge: 'Magia', rating: 4.5, isBestSeller: false, isOffer: true, isRecommended: false, isDigitalExperience: false, originalPrice: 55000 },
+   208→   208→  { name: 'Mega Sorpresa Ultimate', description: 'Combo ultimate: globos + flores + regalo + serenata', price: 320000, category: 'sorpresas', badge: 'Ultimate', rating: 5.0, isBestSeller: true, isOffer: false, isRecommended: true, isDigitalExperience: false },
+   209→   209→];
+   210→   210→
+   211→   211→async function main() {
+   212→   212→  console.log('🌱 Seeding database...');
+   213→   213→
+   214→   214→  // Clear existing products
+   215→   215→  await db.product.deleteMany({});
+   216→   216→
+   217→   217→  // Create all products with proper image mapping
+   218→   218→  for (let i = 0; i < rawProducts.length; i++) {
+   219→   219→    const product = rawProducts[i];
+   220→   220→    const image = getImage(product.category, i);
+   221→   221→
+   222→   222→    await db.product.create({
+   223→   223→      data: {
+   224→   224→        name: product.name,
+   225→   225→        description: product.description,
+   226→   226→        price: product.price,
+   227→   227→        category: product.category,
+   228→   228→        badge: product.badge || null,
+   229→   229→        rating: product.rating,
+   230→   230→        image: image,
+   231→   231→        isBestSeller: product.isBestSeller,
+   232→   232→        isOffer: product.isOffer,
+   233→   233→        isRecommended: product.isRecommended,
+   234→   234→        isDigitalExperience: product.isDigitalExperience,
+   235→   235→        originalPrice: product.originalPrice || null,
+   236→   236→      },
+   237→   237→    });
+   238→   238→  }
+   239→   239→
+   240→   240→  const count = await db.product.count();
+   241→   241→  console.log(`✅ Seeded ${count} products successfully!`);
+   242→   242→
+   243→   243→  // Print category counts
+   244→   244→  for (const [slug, images] of Object.entries(categoryImageMap)) {
+   245→   245→    const catCount = await db.product.count({ where: { category: slug } });
+   246→   246→    console.log(`  ${slug}: ${catCount} products → ${images.join(', ')}`);
+   247→   247→  }
+   248→   248→}
+   249→   249→
+   250→   250→main()
+   251→   251→  .catch((e) => {
+   252→   252→    console.error('❌ Seed failed:', e);
+   253→   253→    process.exit(1);
+   254→   254→  })
+   255→   255→  .finally(async () => {
+   256→   256→    await db.$disconnect();
+   257→   257→  });
+   258→   258→

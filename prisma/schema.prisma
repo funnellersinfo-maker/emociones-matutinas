@@ -11,11 +11,17 @@ model Product {
   id               String   @id @default(cuid())
   name             String
   description      String
+  detailDescription String  @default("")
   price            Int
   category         String
   badge            String?
   rating           Float    @default(4.8)
   image            String
+  images           String   @default("[]")
+  colors           String   @default("[]")
+  sizes            String   @default("[]")
+  features         String   @default("[]")
+  combinations     String   @default("[]")
   isBestSeller     Boolean  @default(false)
   isOffer          Boolean  @default(false)
   isRecommended    Boolean  @default(false)

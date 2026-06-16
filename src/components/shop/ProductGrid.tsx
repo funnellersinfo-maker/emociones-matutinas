@@ -1,32 +1,17 @@
 'use client';
 
 import { Search, Package } from 'lucide-react';
-import { ProductCard } from './ProductCard';
-
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  badge: string | null;
-  rating: number;
-  image: string;
-  isBestSeller: boolean;
-  isOffer: boolean;
-  isRecommended: boolean;
-  isDigitalExperience: boolean;
-  originalPrice: number | null;
-}
+import { ProductCard, Product } from './ProductCard';
 
 interface ProductGridProps {
   products: Product[];
   title?: string;
   id?: string;
   showCount?: boolean;
+  onProductClick?: (product: Product) => void;
 }
 
-export function ProductGrid({ products, title, id, showCount }: ProductGridProps) {
+export function ProductGrid({ products, title, id, showCount, onProductClick }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <div className="text-center py-12">
@@ -54,7 +39,7 @@ export function ProductGrid({ products, title, id, showCount }: ProductGridProps
       )}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} onProductClick={onProductClick || (() => {})} />
         ))}
       </div>
     </section>

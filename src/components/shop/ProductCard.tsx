@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { ShoppingCart, Star } from 'lucide-react';
+import { ShoppingCart, Star, Eye } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { toast } from 'sonner';
 
@@ -9,11 +9,17 @@ interface Product {
   id: string;
   name: string;
   description: string;
+  detailDescription: string;
   price: number;
   category: string;
   badge: string | null;
   rating: number;
   image: string;
+  images: string;
+  colors: string;
+  sizes: string;
+  features: string;
+  combinations: string;
   isBestSeller: boolean;
   isOffer: boolean;
   isRecommended: boolean;
@@ -23,6 +29,7 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  onProductClick: (product: Product) => void;
 }
 
 function formatPrice(price: number): string {
@@ -34,10 +41,11 @@ function formatPrice(price: number): string {
   }).format(price);
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, onProductClick }: ProductCardProps) {
   const addItem = useCartStore((s) => s.addItem);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.stopPropagation();
     addItem({
       id: product.id,
       name: product.name,
@@ -50,8 +58,23 @@ export function ProductCard({ product }: ProductCardProps) {
     });
   };
 
+  // Parse colors to check if options exist
+  const hasOptions = (() => {
+    try {
+      const colors = JSON.parse(product.colors || '[]');
+      const sizes = JSON.parse(product.sizes || '[]');
+      const combos = JSON.parse(product.combinations || '[]');
+      return colors.length > 0 || sizes.length > 0 || combos.length > 0;
+    } catch {
+      return false;
+    }
+  })();
+
   return (
-    <div className="product-card bg-white rounded-2xl border border-pink-100/50 overflow-hidden group">
+    <div
+      className="product-card bg-white rounded-2xl border border-pink-100/50 overflow-hidden group cursor-pointer"
+      onClick={() => onProductClick(product)}
+    >
       {/* Image area */}
       <div className="relative aspect-square bg-pink-50/30 overflow-hidden">
         {/* Badge */}
@@ -76,6 +99,23 @@ export function ProductCard({ product }: ProductCardProps) {
           className="object-cover group-hover:scale-110 transition-transform duration-500"
           sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
         />
+
+        {/* Hover overlay - View detail */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <div className="flex items-center gap-1.5 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-full shadow-lg">
+              <Eye className="w-4 h-4 text-pink-500" />
+              <span className="text-xs font-semibold text-gray-700">Ver detalle</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Options indicator */}
+        {hasOptions && (
+          <div className="absolute top-2 right-2 z-10 px-2 py-1 bg-pink-500/90 rounded-full text-[9px] font-bold text-white shadow-sm">
+            + Opciones
+          </div>
+        )}
 
         {/* Rating */}
         <div className="absolute bottom-2 right-2 flex items-center gap-1 px-2 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-sm z-10">
@@ -124,3 +164,4 @@ export function ProductCard({ product }: ProductCardProps) {
 }
 
 export { formatPrice };
+export type { Product };
